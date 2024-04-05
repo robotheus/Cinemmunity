@@ -26,62 +26,10 @@ header {
   margin-inline: 100px;
 }
 
-#imagem_entrada {
-  width: 20px;
-  height: 20px;
-  border-radius: 12px;
-  margin: 19px 0 0 240px;
-  border: 1px solid white;
-}
-
-nav {
-  font-weight: bolder;
-  padding-bottom: 1px;
-  width: fit-content;
-  margin-left: auto;
-}
-
-ul {
-  padding-left: 0px;
-}
-
-nav a {
-  padding: 6px 10px;
-  color: white;
-}
-
-nav button {
-  background-color: #00C030;
-  border-radius: 5px;
-  color: white;
-  font-weight: bolder;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  align-items: center;
-  font-size: 1em;
-  border: 1px;
-}
-
-nav button:hover {
-  background-color: #00A11D;
-  cursor: pointer;
-}
-
 main {
   background-color: #1C2229;
-}
-
-/* BA: add "height" */
-main {
   padding: 10px;
   text-align: center;
-}
-
-main h1 {
-  font-weight: 390;
-  padding: 75px;
 }
 
 main h2 {
@@ -89,7 +37,6 @@ main h2 {
   font-size: larger;
 }
 
-/* PÁGINA INICIAL */
 #principal{
   width: fit-content;
   margin: auto;
@@ -129,132 +76,10 @@ main h2 {
   transform: scale(1.1);
 }
 
-.movies img:active {
-  transform: scale(0.95);
-}
-
-a {
-  text-decoration: none;
-}
-
-main a {
-  color: white;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.clip {
-  padding: 10px;
-  text-align: center;
-}
-
-/* PÁGINA DA REVIEW */
-#paginaReview {
-  height: calc(var(--bodyHeight) - 64.06px - 83.01px);
-}
-
-/* BA: del text-align, del height, add display */
-.review {
-  width: fit-content;
-  display: inline grid;
-  grid-template: 1fr / 20% 1fr;
-}
-
-.poster {
-  width: 144px;
-  height: 247px;
-  border: 1px solid white;
-  border-radius: 5px;
-  box-shadow: 0px 0px 6px black;
-  margin: 10px;
-}
-
-.core {
-  margin-right: 0px;
-  padding-left: 16px;
-  width: 600px;
-  text-align: justify;
-}
-
-.user {
-  font-weight: 900;
-  color: rgb(209, 200, 200);
-}
-
-#username {
-  margin-bottom: 0px;
-}
-
-/* BA: "p[img]" --> "div[img p]"  */
-div {
-  display: flex;
-}
-
-/* BA: ex "p img", add "margin-right" */
-div img {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  margin: 14px 10px 0 0;
-}
-
 #titulo_p {
   font-family: Arial, sans-serif;
   align-items: center;
   display: flex;
-}
-
-.titulo {
-  font-family: 'Neuton', serif;;
-  font-weight: 700;
-  font-size: 180%;
-  color: white;
-  padding: 0px;
-  margin: 10px 10px 10px 0px;
-}
-
-#estrelas {
-  font-weight: normal;
-  font-size: 0.8em;
-  color: #00C030;
-}
-
-#coracao {
-  font-size: 0.6em;
-  color: #FF8000;
-}
-
-#ano {
-  font-weight: 300;
-  font-size: 0.6em;
-  padding-left: 15px;
-  padding-right: 100px;
-  color: #8899AA;
-}
-
-#texto {
-  font-family: 'Neuton', serif;
-  font-size: 20px;
-}
-
-/* RODAPÉ */
-/* BA: del position, del align, add display, add justify */
-footer {
-  padding: 15px;
-  display: grid;
-  justify-items: center;
-}
-
-::selection {
-  background-color: #8899AA;
-  color: white;
 }
 
 #btn-login, #btn-cadastro {
@@ -270,7 +95,6 @@ footer {
 }
 
 @media only screen and (max-width: 750px) {
-
 	.movies {
 	  text-align: center;
 	  width: 100%;
@@ -280,10 +104,6 @@ footer {
 	  text-align: left;
 	}
 
-	.movies a {
-	  height: 20%;
-	}
-	
 	.movies img {
 	  
 	  margin-inline: 1%;
@@ -294,6 +114,4 @@ footer {
 	.movies img:hover {
 	  transform: none;
 	}
-
-  
 }
