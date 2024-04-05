@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Cinemmunity</title>
    <link rel="shortcut icon" href="../img/movie-clapper-open.png" type="image/x-icon">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styles/style_home.css">
 </head>
 
 <body>
@@ -19,6 +19,22 @@
       <button id="btn-login">Login</button>
       <button id="btn-cadastro">Cadastro</button>
       
+      <div id="loginForm" class="hidden">
+         <h2>Login</h2>
+         <input type="text" placeholder="Nickname">
+         <input type="password" placeholder="Senha">
+         <button id="loginSubmit">Fazer Login</button>
+      </div>
+     
+      <div id="cadastroForm" class="hidden">
+         <h2>Cadastro</h2>
+         <input type="text" placeholder="Nickname">
+         <input type="password" placeholder="Senha">
+         <input type="password" placeholder="Confirmação de senha">
+         <input type="email" placeholder="Email">
+         <button id="cadastroSubmit">Cadastrar</button>
+      </div>
+
       <section id="principal">
          <h2>LANÇAMENTOS DE ABRIL</h2>
          <hr>
@@ -64,5 +80,6 @@
             <img src="https://a.ltrbxd.com/resized/film-poster/2/9/1/2/1/3/291213-road-house-0-1000-0-1500-crop.jpg?v=c0d0e95ba3" alt="road house">
          </section>
       </section>
+      <script src="scripts/script.js"></script>
    </main>
-   </body>
+</body>
