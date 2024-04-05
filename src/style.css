@@ -101,6 +101,17 @@ main h2 {
   margin-bottom: 70px;
 }
 
+#mauricio {
+    width: 200px;
+    height: auto;
+    margin-left: 200px;
+}
+
+#cabeçalho {
+  align-items: center;
+  text-align: center;
+}
+
 .movies img {
   width: 144px;
   height: 247px;
@@ -194,6 +205,12 @@ div img {
   margin: 14px 10px 0 0;
 }
 
+#titulo_p {
+  font-family: Arial, sans-serif;
+  align-items: center;
+  display: flex;
+}
+
 .titulo {
   font-family: 'Neuton', serif;;
   font-weight: 700;
@@ -240,6 +257,18 @@ footer {
   color: white;
 }
 
+#btn-login, #btn-cadastro {
+  background: #00b300;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 750px) {
 
 	.movies {
@@ -266,5 +295,5 @@ footer {
 	  transform: none;
 	}
 
-
+  
 }
