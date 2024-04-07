@@ -14,33 +14,36 @@ cadastroBtn.addEventListener('click', () => {
 });
 
 document.getElementById('loginSubmit').addEventListener('click', () => {
-    // Lógica para fazer login
+    const nickname = document.getElementById('nickname').value;
+    const senha = document.getElementById('senha').value;
 });
 
-document.getElementById('cadastroSubmit').addEventListener('click', () => {
+document.getElementById('cadastroSubmit').addEventListener('click', async () => {
     const nickname = document.getElementById('nickname').value;
     const senha = document.getElementById('senha').value;
     const email = document.getElementById('email').value;
 
-    // Enviar os dados para o servidor
-    fetch('/cadastrar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ nickname, senha, email })
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('nickname').value = '';
-        document.getElementById('senha').value = '';
-        document.getElementById('email').value = '';
+    try {
+        const response = await fetch('/cadastro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nickname, senha, email })
+        });
 
-        const mensagemCadastro = document.getElementById('cadastroMsg');
-        mensagemCadastro.textContent = data.message;
-        mensagemCadastro.classList.remove('hidden');
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-    });
+        if (response.ok) {
+            const data = await response.text();
+            document.getElementById('nickname').value = '';
+            document.getElementById('senha').value = '';
+            document.getElementById('email').value = '';
+            
+            alert('Cadastro realizado com sucesso!');
+        } else {
+            alert('ERRO de cadastro!');
+        }
+    } catch (err) {
+        console.error(err);
+    }
 });
+

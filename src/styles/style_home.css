@@ -47,12 +47,12 @@ main h2 {
 #mauricio {
     width: 200px;
     height: auto;
-    margin-left: 200px;
 }
 
-#cabeçalho {
-  align-items: center;
-  text-align: center;
+#topo {
+  display: flex;
+  justify-content: center;
+  
 }
 
 .movies img {
