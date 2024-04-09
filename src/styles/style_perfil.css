@@ -1,1 +1,72 @@
-@import "style_home.css"
+@import "style_home.css";
+
+nav {
+    font-weight: bolder;
+    padding-bottom: 1px;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+nav a {
+padding: 6px 10px;
+color: white;
+}
+
+nav button {
+background-color: #00C030;
+border-radius: 5px;
+color: white;
+font-weight: bolder;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+align-items: center;
+font-size: 1em;
+border: 1px;
+}
+
+nav button:hover {
+background-color: #00A11D;
+cursor: pointer;
+}
+
+.right-side {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    div {
+      border-left: solid rgba(153, 170, 187, 0.13) 1px;
+      height: 40px;
+      margin-bottom: 50px;
+
+      h4 {
+        color: rgb(216, 224, 232);
+        font-family: "linux-libertine", sans-serif;
+        font-size: 1.61538462rem;
+        text-align: center;
+      }
+      p {
+        color: rgb(102, 119, 136);
+        font-family: "graphik-light", sans-serif;
+        font-size: 0.66923077rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin: 0 10px;
+        text-align: center;
+        padding-top: 5px;
+      }
+      h4:hover,
+      p:hover {
+        cursor: pointer;
+      }
+      p:hover {
+        color: $hover;
+      }
+    }
+    div:nth-of-type(1) {
+      border-left: none;
+    }
+  }
+}

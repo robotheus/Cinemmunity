@@ -13,9 +13,30 @@ cadastroBtn.addEventListener('click', () => {
     loginForm.classList.add('hidden');
 });
 
-document.getElementById('loginSubmit').addEventListener('click', () => {
-    const nickname = document.getElementById('nickname').value;
-    const senha = document.getElementById('senha').value;
+document.getElementById('loginSubmit').addEventListener('click', async () => {
+    const nickname = document.getElementById('nicknamelog').value;
+    const senha = document.getElementById('senhalog').value;
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nickname, senha })
+        });
+
+        if (response.ok) {
+            const data = await response.text();
+            alert(data);
+            window.location.href = "perfil";
+        } else {
+            const data = await response.text();
+            alert(data);
+        }
+    } catch (err) {
+        console.error(err);
+    }
 });
 
 document.getElementById('cadastroSubmit').addEventListener('click', async () => {
@@ -34,16 +55,16 @@ document.getElementById('cadastroSubmit').addEventListener('click', async () => 
 
         if (response.ok) {
             const data = await response.text();
+            alert(data);
+
             document.getElementById('nickname').value = '';
             document.getElementById('senha').value = '';
             document.getElementById('email').value = '';
-            
-            alert('Cadastro realizado com sucesso!');
         } else {
-            alert('ERRO de cadastro!');
+            const data = await response.text();
+            alert(data);
         }
     } catch (err) {
         console.error(err);
     }
 });
-

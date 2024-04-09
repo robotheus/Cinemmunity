@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const app_aux = express();
 const path = require('path');
 
 mongoose.connect('mongodb://localhost:27017/cinemmunity', {
@@ -37,8 +36,17 @@ const User = mongoose.model('User', {
     seguindo: {
         type: Number,
         default: 0
+    },
+    filmes: {
+        type: Number,
+        default: 0
+    },
+    listas: {
+        type: Number,
+        default: 0
     }
 });
+
 
 app.post('/cadastro', async (req, res) => {
     try {
@@ -56,12 +64,41 @@ app.post('/cadastro', async (req, res) => {
     }
 });
 
+app.post('/login', async (req, res) => {
+    const { nickname, senha } = req.body;
+
+    try {
+        const user = await User.findOne({ nickname });
+        console.log(user)
+
+        if (!user) {
+            res.status(404).send('Usuário não encontrado');
+            return;
+        }
+
+        if (user.senha !== senha) {
+            res.status(401).send('Senha incorreta');
+            return;
+        }
+
+        res.status(200).send('Login bem-sucedido');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Erro ao fazer login');
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src')));
 
 app.get('/', (req, res) => {
     const indexPath = path.resolve(__dirname, '..', 'index.html');
+    res.sendFile(indexPath);
+});
+
+app.get('/perfil', (req, res) => {
+    const indexPath = path.resolve(__dirname, '..', 'perfil.html');
     res.sendFile(indexPath);
 });
 
@@ -73,6 +110,11 @@ app.get('/scripts/script.js', (req, res) => {
 app.get('/styles/style_home.css', (req, res) => {
     res.type('text/css'); 
     res.sendFile(path.join(__dirname, '..', 'styles', 'style_home.css'));
+});
+
+app.get('/styles/style_perfil.css', (req, res) => {
+    res.type('text/css'); 
+    res.sendFile(path.join(__dirname, '..', 'styles', 'style_perfil.css'));
 });
 
 app.use('/img', express.static(path.join(__dirname, '..', '..', 'img')));
