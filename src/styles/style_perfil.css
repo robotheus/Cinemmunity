@@ -1,72 +1,105 @@
 @import "style_home.css";
 
-nav {
-    font-weight: bolder;
-    padding-bottom: 1px;
-    width: fit-content;
-    margin-left: auto;
-  }
-
-nav a {
-padding: 6px 10px;
-color: white;
-}
-
-nav button {
-background-color: #00C030;
-border-radius: 5px;
-color: white;
-font-weight: bolder;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 5px;
-padding-bottom: 5px;
-align-items: center;
-font-size: 1em;
-border: 1px;
-}
-
-nav button:hover {
-background-color: #00A11D;
-cursor: pointer;
+#botao-sair {
+  background: #b30600;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .right-side {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 
-    div {
-      border-left: solid rgba(153, 170, 187, 0.13) 1px;
-      height: 40px;
-      margin-bottom: 50px;
+  div {
+    border-left: solid rgba(153, 170, 187, 0.13) 1px;
+    height: 40px;
+    margin-bottom: 50px;
 
-      h4 {
-        color: rgb(216, 224, 232);
-        font-family: "linux-libertine", sans-serif;
-        font-size: 1.61538462rem;
-        text-align: center;
-      }
-      p {
-        color: rgb(102, 119, 136);
-        font-family: "graphik-light", sans-serif;
-        font-size: 0.66923077rem;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        margin: 0 10px;
-        text-align: center;
-        padding-top: 5px;
-      }
-      h4:hover,
-      p:hover {
-        cursor: pointer;
-      }
-      p:hover {
-        color: $hover;
-      }
+    h4 {
+      color: rgb(216, 224, 232);
+      font-family: "linux-libertine", sans-serif;
+      font-size: 1.61538462rem;
+      text-align: center;
     }
-    div:nth-of-type(1) {
-      border-left: none;
+    p {
+      color: rgb(102, 119, 136);
+      font-family: "graphik-light", sans-serif;
+      font-size: 0.66923077rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0 10px;
+      text-align: center;
+      padding-top: 5px;
     }
+    h4:hover,
+    p:hover {
+      cursor: pointer;
+    }
+  div:nth-of-type(1) {
+    border-left: none;
   }
+}
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+.top-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div > * {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Evita que os elementos quebrem para uma nova linha */
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#button-buscar {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#button-buscar:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.info {
+  display: inline-block;
+  margin-right: 10px;
 }

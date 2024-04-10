@@ -10,41 +10,77 @@
 </head>
 
 <body>
-   <nav>
-      <ul>
-         <a href="#" class="textoHeader">FILMES</a>
-         <a href="#" class="textoHeader">LISTAS</a>
-         <a href="#" class="textoHeader">AMIGOS</a>
-         <a href="#" class="textoHeader"><button>SAIR</button></a>
-      </ul>
-   </nav>
-
-   <div id="topo">
+  <div id="topo">
       <img id="mauricio" src="../img/7arte.png">
       <h1 id="titulo_p">CINEmmunity - Sua comunidade de cinema</h1>
-   </div>
+  </div>
+    
+  <div id="topo-lateral">
+    <nav>
+      <ul>
+         <a href="#">FILMES</a>
+         <a href="#">LISTAS</a>
+         <a href="#">AMIGOS</a>
+         <button id="botao-sair">SAIR</button>
+      </ul>
+   </nav>
+  </div>
+  
+    <main>
+      <div class="container">
+        <h3 id="result-nick"></h3>
+        <div class="info">
+            <h3><h3 id="result-filme"></h3> filmes</h3>
+        </div>
+        <div class="info">
+            <h3><h3 id="result-listas"></h3> listas</h3>
+        </div>
+        <div class="info">
+            <h3><h3 id="result-seguindo"></h3> seguindo</h3>
+        </div>
+        <div class="info">
+            <h3><h3 id="result-seguidores"></h3> seguidores</h3>
+        </div>
+      </div>
+    
+      
+      <div class="container">
+        <h3>Buscar usuário</h3>
+        <input type="text" id="username" placeholder="Nickname">
+        <button id="button-buscar" onclick="buscarUsuarios()">Buscar</button>
+        <div class="result" id="result"></div>
+      </div>
+      
+    </main>
+    <script src="scripts/script.js"></script>
+    <script>
+      async function buscarUsuario() {
+      const urlParams = new URLSearchParams(window.location.search);
+      nickname = urlParams.get('nickname');
 
-   <div class="right-side">
-      <div>
-        <h4>235</h4>
-        <p>films</p>
-      </div>
-      <div>
-        <h4>16</h4>
-        <p>this year</p>
-      </div>
-      <div>
-        <h4>7</h4>
-        <p>lists</p>
-      </div>
-      <div>
-        <h4>26</h4>
-        <p>following</p>
-      </div>
-      <div>
-        <h4>26</h4>
-        <p>followers</p>
-      </div>
-    </div>
-   </main>
+      try {
+          const response = await fetch('/buscar-usuario', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ nickname })
+          });
+          const data = await response.json();
+          console.log(data)
+          
+          if (response.ok) {
+              document.getElementById('result-nick').innerHTML = `<h2 id="result-nick">Bem vindo, ${data.nickname}</h2>`;
+              document.getElementById('result-filme').innerHTML = `<h2 id="result-nick">${data.filmes}</h2>`;
+              document.getElementById('result-listas').innerHTML = `<h2 id="result-nick">${data.listas}</h2>`;
+              document.getElementById('result-seguindo').innerHTML = `<h2 id="result-nick">${data.seguindo}</h2>`;
+              document.getElementById('result-seguidores').innerHTML = `<h2 id="result-nick">${data.seguidores}</h2>`;
+          }
+      } catch (err) {
+          console.error(err);
+      }
+    }
+
+    window.onload = buscarUsuario();
+    </script>
 </body>

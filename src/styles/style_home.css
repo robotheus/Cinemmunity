@@ -78,7 +78,7 @@ main h2 {
   display: flex;
 }
 
-#btn-login, #btn-cadastro, #loginSubmit, #cadastroSubmit {
+#btn-login, #btn-cadastro, #loginSubmit, #cadastroSubmit, #seguirbtn {
   background: #00b300;
   color: #ffffff;
   padding: 8px 16px;
@@ -109,7 +109,9 @@ nav {
   font-weight: bolder;
   padding-bottom: 1px;
   width: fit-content;
-  margin-left: auto;
+  position: fixed; 
+  top: 0; 
+  right: 0;
 }
 
 ul {

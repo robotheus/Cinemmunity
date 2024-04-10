@@ -1,6 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'src')));
+
+//-----------CONEXÃO COM O BANCO----------------------
 
 mongoose.connect('mongodb://localhost:27017/cinemmunity', {
     useNewUrlParser: true,
@@ -12,8 +19,7 @@ mongoose.connect('mongodb://localhost:27017/cinemmunity', {
     process.exit();
 });
 
-const app = express();
-app.use(express.json());
+//-----------TABELA USUARIO----------------------
 
 const User = mongoose.model('User', {
     nickname: {
@@ -47,6 +53,7 @@ const User = mongoose.model('User', {
     }
 });
 
+//-----------ROTAS----------------------
 
 app.post('/cadastro', async (req, res) => {
     try {
@@ -88,9 +95,41 @@ app.post('/login', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
+app.post('/buscar-usuario', async (req, res) => {
+    const nickname = req.body.nickname;
+    
+    try {
+        const usuario = await User.findOne({ nickname: nickname });
+        if (usuario) {
+            res.json(usuario);
+        } else {
+            res.status(404).json({ message: 'Usuário não encontrado' });
+        }
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
-app.use(express.static(path.join(__dirname, 'src')));
+app.post('/seguir-usuario', async (req, res) => {
+    const followedUserNickname = req.body.followedUser;
+
+    try {
+        const followedUser = await User.findOne({ nickname: followedUserNickname });
+        
+        if (!followedUser) {
+            return res.status(404).json({ message: 'O usuário a ser seguido não foi encontrado.' });
+        }
+
+        followedUser.seguidores += 1;
+        await followedUser.save();
+
+        return res.status(200).json({ message: 'Você seguiu com sucesso este usuário!' });
+    } catch (error) {
+        console.error('Erro ao seguir usuário:', error);
+        return res.status(500).json({ message: 'Erro ao seguir usuário.' });
+    }
+});
+
 
 app.get('/', (req, res) => {
     const indexPath = path.resolve(__dirname, '..', 'index.html');
