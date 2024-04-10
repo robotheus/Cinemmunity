@@ -112,16 +112,25 @@ app.post('/buscar-usuario', async (req, res) => {
 
 app.post('/seguir-usuario', async (req, res) => {
     const followedUserNickname = req.body.followedUser;
+    const followerUserId = req.body.followerUserId;
 
     try {
         const followedUser = await User.findOne({ nickname: followedUserNickname });
-        
+        const followerUser = await User.findOne({ nickname: followerUserId });
+
         if (!followedUser) {
             return res.status(404).json({ message: 'O usuário a ser seguido não foi encontrado.' });
         }
 
+        if (!followerUser) {
+            return res.status(404).json({ message: 'O usuário que está seguindo não foi encontrado.' });
+        }
+
         followedUser.seguidores += 1;
+        followerUser.seguindo += 1;
+
         await followedUser.save();
+        await followerUser.save();
 
         return res.status(200).json({ message: 'Você seguiu com sucesso este usuário!' });
     } catch (error) {
@@ -130,6 +139,34 @@ app.post('/seguir-usuario', async (req, res) => {
     }
 });
 
+app.post('/deixar-seguir-usuario', async (req, res) => {
+    const followedUserNickname = req.body.followedUser;
+    const followerUserId = req.body.followerUserId;
+
+    try {
+        const followedUser = await User.findOne({ nickname: followedUserNickname });
+        const followerUser = await User.findOne({ nickname: followerUserId });
+
+        if (!followedUser) {
+            return res.status(404).json({ message: 'O usuário a ser seguido não foi encontrado.' });
+        }
+
+        if (!followerUser) {
+            return res.status(404).json({ message: 'O usuário que está seguindo não foi encontrado.' });
+        }
+
+        followedUser.seguidores -= 1;
+        followerUser.seguindo -= 1;
+
+        await followedUser.save();
+        await followerUser.save();
+
+        return res.status(200).json({ message: 'Você deixou de seguir com sucesso este usuário!' });
+    } catch (error) {
+        console.error('Erro ao seguir usuário:', error);
+        return res.status(500).json({ message: 'Erro ao deixar de seguir o usuário.' });
+    }
+});
 
 app.get('/', (req, res) => {
     const indexPath = path.resolve(__dirname, '..', 'index.html');

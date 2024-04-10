@@ -80,8 +80,14 @@ document.getElementById('cadastroSubmit').addEventListener('click', async () => 
     }
 });
 
+function getUsuarioLogado() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('nickname');
+}
+
 async function buscarUsuarios() {
     const username = document.getElementById("username").value;
+    const urlParams = new URLSearchParams(window.location.search);
 
     try {
         const response = await fetch('/buscar-usuario', {
@@ -103,16 +109,60 @@ async function buscarUsuarios() {
             const seguirBtn = document.createElement("button");
             seguirBtn.style.cssText = "background: #00b300; color: #ffffff; padding: 8px 16px; border-radius: 5px; border: none; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 20px;";
             seguirBtn.textContent = "Seguir";
-            seguirBtn.onclick = () => {
-                //implementar o seguir
-            };
-            resultDiv.appendChild(seguirBtn);
-
+            
             const deixarSeguirBtn = document.createElement("button");
             deixarSeguirBtn.textContent = "Deixar de Seguir";
             deixarSeguirBtn.style.cssText = "background: #b30600; color: #ffffff; padding: 8px 16px; border-radius: 5px; border: none; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 20px;";
-            deixarSeguirBtn.onclick = () => {
-                //implementar o deixar de seguir
+           
+            seguirBtn.onclick = async () => {
+                const followedUserNickname = data.nickname; // nickname do usuário seguido
+                const followerUserId = urlParams.get('nickname'); // nickname do usuário logado
+            
+                try {
+                    const response = await fetch('/seguir-usuario', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ followedUser: followedUserNickname, followerUserId: followerUserId })
+                    });
+            
+                    const responseData = await response.json();
+            
+                    if (response.ok) {
+                        alert(responseData.message);
+                    } else {
+                        alert(responseData.message);
+                    }
+                } catch (error) {
+                    console.error('Erro:', error);
+                }
+            };
+            resultDiv.appendChild(seguirBtn);
+ 
+            deixarSeguirBtn.onclick = async () => {
+                const followedUserNickname = data.nickname; // nickname do usuário seguido
+                const followerUserId = urlParams.get('nickname'); // nickname do usuário logado
+            
+                try {
+                    const response = await fetch('/deixar-seguir-usuario', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ followedUser: followedUserNickname, followerUserId: followerUserId })
+                    });
+            
+                    const responseData = await response.json();
+            
+                    if (response.ok) {
+                        alert(responseData.message);
+                    } else {
+                        alert(responseData.message);
+                    }
+                } catch (error) {
+                    console.error('Erro:', error);
+                }
             };
             resultDiv.appendChild(deixarSeguirBtn);
         } else {
@@ -121,4 +171,8 @@ async function buscarUsuarios() {
     } catch (error) {
         console.error('Erro:', error);
     }
+}
+
+function sair() {
+    window.location.href = "/";
 }
