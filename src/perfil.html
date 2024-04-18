@@ -1,86 +1,928 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Perfil</title>
-   <link rel="shortcut icon" href="../img/movie-clapper-open.png" type="image/x-icon">
-   <link rel="stylesheet" href="styles/style_perfil.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/movie-clapper-open.png">
+    <link rel="stylesheet" href="styles/style_perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>CINEmmunity &bull; Rede social</title>
 </head>
 
-<body>
-  <div id="topo">
-      <img id="mauricio" src="../img/7arte.png">
-      <h1 id="titulo_p">CINEmmunity - Sua comunidade de cinema</h1>
-  </div>
+<body class="no-roll" id="body">
+
+<!-- ============== HEADER  =============== -->
+
+<div class="relleno">
+    <header class="header">
+
+        <div class="logo-container">
+                <a class="link">
+                    <img src="../img/7arte.png" alt="Logo Letterboxd">
+                    <h1>CINEmmunity</h1>
+                </a>
+        </div>
+            <ul class="lista-navbar">
+                <li><a href="profile.html"><img src="images/iconos-usuarios/Elisa Tuler2.jpg">Elisa<i class="bi bi-chevron-down"></i></a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Listas</a></li>
+                <li><a href="#"><i class="bi-search"></i></a></li>
+                <li><button id="botao-sair" onclick="sair()">SAIR</button></li>
+            </ul>
+        <div class="iconos-resize">
+            <i class="bi bi-plus-lg"></i>
+            <i class="bi bi-list-ul"></i>
+            <i class="bi-search"></i>
+        </div>
+
+    </header>
+</div>
+
+
+<!-- ============== MAIN ============= -->
+
+    <div class="degrade"></div>
+
+    <div class="container">
+        <div class="mensaje">
+            <h1>Bem vinda à sua timeline, <a href="perfil.html">Elisa.</a></h1>
+        </div>
+        
+        <div class="sobretodo">
+            <a href="#">Atividade recente <datagrid></datagrid>dos seus amigos</a>
+        </div>
+    </div>
     
-  <div id="topo-lateral">
-    <nav>
-      <ul>
-         <a href="#">FILMES</a>
-         <a href="#">LISTAS</a>
-         <a href="#">AMIGOS</a>
-         <button id="botao-sair" onclick="sair()">SAIR</button>
-      </ul>
-   </nav>
-  </div>
+    
+<!-- ============== TIMELINE DOS AMIGOS =============== -->
+
+    <!-- ============= FILMES ============== -->
+
+    <section class="recent-from-friends new-poster">
+            <ul class="posters-list">
+
+                <!-- FILME 1 -->
+                <li class="poster-container">
+                    <div class="poster-content">
+                        <img src="images/posters/the-batman.jpg" class="poster">
+                        <div class="action-poster">
+                            <i class="bi bi-eye-fill"></i>
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="poster-footer">
+                            <img src="images/iconos-usuarios/maxresdefault.jpg">
+                            <p>leo rocha</p>
+                        </div>
+                
+                    </div>
+                    <div class="estrellas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <p>18 abril</p>
+                    </div>
+                </li>
+                
+                <!-- FILME 2 -->
+                <li class="poster-container">
+                    <div class="poster-content">
+                        <img src="https://m.media-amazon.com/images/I/61zLkd00iuL._AC_UF1000,1000_QL80_DpWeblab_.jpg" class="poster">
+                        <div class="action-poster">
+                            <i class="bi bi-eye-fill"></i>
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="poster-footer">
+                            <img src="images/iconos-usuarios/Martin_Scorsese_Berlinale_2010_(cropped2).jpg">
+                            <p>scorsese1942</p>
+                        </div>
+                
+                    </div>
+                    <div class="estrellas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <p>18 abril</p>
+                    </div>
+                </li>
+                <!-- FILME 3-->
+                <li class="poster-container">
+                    <div class="poster-content">
+                        <img src="https://media.fstatic.com/8jKdtr5761otq0fHNPeWHGuIBYE=/322x478/smart/filters:format(webp)/media/movies/covers/2024/01/6jNAIOa3PMcmsWlhn3QI2rGyJPX.jpg" class="poster">
+                        <div class="action-poster">
+                            <i class="bi bi-eye-fill"></i>
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="poster-footer">
+                            <img src="images/iconos-usuarios/file.jpeg">
+                            <p>matheus</p>
+                        </div>
+                
+                    </div>
+                    <div class="estrellas repeat">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <p>19 abril</p>
+                    </div>
+                </li>
+                <!-- FILME 4-->
+                <li class="poster-container">
+                    <div class="poster-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/0/0d/Meangirls.jpg/245px-Meangirls.jpg" class="poster">
+                        <div class="action-poster">
+                            <i class="bi bi-eye-fill"></i>
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="poster-footer">
+                            <img src="images/iconos-usuarios/file2.jpeg" width="15px">
+                            <p>rian</p>
+                        </div>
+                
+                    </div>
+                    <div class="estrellas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <p>20 abril</p>
+                    </div>
+                </li>
+                
+                <!-- FILME 5 -->
+                <li class="poster-container">
+                    <div class="poster-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/4/49/Constantineposter.jpg" class="poster">
+                        <div class="action-poster">
+                            <i class="bi bi-eye-fill"></i>
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="poster-footer">
+                            <img src="images/iconos-usuarios/file3.jpeg" width="15px">
+                            <p>daniel</p>
+                        </div>
+                
+                    </div>
+                    <div class="estrellas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <p>21 abril</p>
+                    </div>
+                </li>
+                <!-- FILME 6-->
+                <li class="poster-container">
+                    <div class="poster-content">
+                        <img src="https://leiturafilmica.com.br/wp-content/uploads/2021/07/o-poderoso-chefao-poster.png" class="poster">
+                        <div class="action-poster">
+                            <i class="bi bi-eye-fill"></i>
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="poster-footer">
+                            <img src="images/iconos-usuarios/file4.jpeg" width="15px">
+                            <p>renan</p>
+                        </div>
+                
+                    </div>
+                    <div class="estrellas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <p>22 abril</p>
+                    </div>
+                </li>
+                
+
+            </ul>
+    </section>
+
+
+
+<!-- ============== PUBLICIDAD GET PRO =============== -->
+
+    <a href="#" class="container get-pro">
+        <img src="images/get-pro.png" alt="Get Pro">
+    </a>
+
+    <div class="container get-pro-mobile">
+        <img src="images/pro-mobile-o.png" >
+    </div>
+
+    <div class="container get-pro">
+    </div>
+
+
+
+<!-- ============== POPULAR WITH FRIENDS SECTION =============== -->
+
+    <div class="container">
+        <div class="sobretodo">
+            <a href="#">Popular with friends</a>
+            <a href="#">More</a>
+        </div>
+    </div>
+
+
+    <!-- ============= POSTERS ============== -->
+
+    <section class="recent-from-friends  popular-poster">
+        <ul class="posters-list">
+
+            <!-- POSTER 1 -->
+            <li class="poster-container">
+                <div class="poster-content">
+                    <img src="images/posters/malignant-movie-poster.jpg" class="poster">
+                    <div class="action-poster">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+            </li>
+            <!-- POSTER 2 -->
+            <li class="poster-container">
+                <div class="poster-content">
+                    <img src="images/posters/the-batman.jpg" class="poster">
+                    <div class="action-poster">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+            </li>
+            <!-- POSTER 3 -->
+            <li class="poster-container">
+                <div class="poster-content">
+                    <img src="images/posters/lalaland.jpg" class="poster">
+                    <div class="action-poster">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+            </li>
+            <!-- POSTER 4 -->
+            <li class="poster-container">
+                <div class="poster-content">
+                    <img src="images/posters/spencer.jpg" class="poster">
+                    <div class="action-poster">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+            </li>
+            <!-- POSTER 5 -->
+            <li class="poster-container">
+                <div class="poster-content">
+                    <img src="images/posters/licorice-pizza.jpg" class="poster">
+                    <div class="action-poster">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+            </li>
+            <!-- POSTER 6 -->
+            <li class="poster-container">
+                <div class="poster-content">
+                    <img src="images/posters/babylon.jpg" class="poster">
+                    <div class="action-poster">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+            </li>
+            
+
+        </ul>
+    </section>
+
+
+
+<!-- ============== LAST NEWS SECTION =============== -->
+
+    <div class="container last-news">
+        <div class="sobretodo">
+            <a href="#">Lastest News</a>
+            <a href="#">More</a>
+        </div>
+    </div>
+
+    <div class="container lastest-news">
+        <img src="images/last-news-photo.jpg" alt="Tony Hawk Photo">
+        <div class="news-text-container">
+            <a href="#">
+                <h5>Vertical Limit</h5>
+            </a>
+            <p>Filmmaker, photographer and long-form conversationalist Sam Jones drops in for a chat about drones, daughters and his new documentary about a skateboarding legend, Tony Hawk: Until the Wheels Fall Off. <a href="#"> READ MORE </a> </p>
+        </div>
+    </div>
+
+
+
   
-    <main>
-      <div class="container">
-        <h3 id="result-nick"></h3>
-        <div class="info">
-            <h3><h3 id="result-filme"></h3> filmes</h3>
+
+
+<!-- ============== POPULAR REVIEWS FROM FRIENDS SECTION =============== -->
+
+
+    <div class="container margin-top pr-margin">
+        <div class="sobretodo">
+            <a href="#">Popular Reviews With Friends</a>
+            <a href="#">More</a>
         </div>
-        <div class="info">
-            <h3><h3 id="result-listas"></h3> listas</h3>
-        </div>
-        <div class="info">
-            <h3><h3 id="result-seguindo"></h3> seguindo</h3>
-        </div>
-        <div class="info">
-            <h3><h3 id="result-seguidores"></h3> seguidores</h3>
-        </div>
-      </div>
+    </div>
+
+    <div class="container popular-reviews">
+
+    <!-- PRIMER COLUMNA -->
+        <div class="columna">
+
+                    <!-- FORD VS FERRARI REVIEW -->
+            <div class="review-container">
+                <div class="review-content">
+                    <img src="images/posters/ford-v-ferrari.jpg">
+                    <div class="user-title-stars">
+                        <div class="usuario">
+                            <img src="images/iconos-usuarios/citric.png">
+                            <a href="#">citric y critico</a>
+                        </div>
+                        <h5>Ford vs Ferrari</h5><span>2019</span>
+                        <div class="estrellas estrellas-review">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-chat-left-fill"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
     
-      
-      <div class="container">
-        <h3>Buscar usuário</h3>
-        <input type="text" id="username" placeholder="Nickname">
-        <button id="button-buscar" onclick="buscarUsuarios()">Buscar</button>
-        <div class="result" id="result"></div>
-      </div>
-      
-    </main>
-    <script src="scripts/script.js"></script>
-    <script>
-      async function buscarUsuario() {
-      const urlParams = new URLSearchParams(window.location.search);
-      nickname = urlParams.get('nickname');
+                <div class="review-text">
+                    <p>In a year of films where it feels everyone involved was doing their absolute best, Ford v Ferrari lands on the opposite side of the spectrum. Aside from the editors it was clear that everyone who worked on this, and I mean EVERYONE (besides the editors...and fuck it, Bale too) sleepwalked their way through this. Just when you think something worth writing about is going to happen, they pull back. The bright cinematography was eye-grabbing at first but gets old real fast. It’s getting the job done, nothing more. It’ll be the talk of the town at this year’s Thanksgiving, though.</p>
+                </div>
 
-      try {
-          const response = await fetch('/buscar-usuario', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({ nickname })
-          });
-          const data = await response.json();
-          console.log(data)
-          
-          if (response.ok) {
-              document.getElementById('result-nick').innerHTML = `<h2 id="result-nick">Bem vindo, ${data.nickname}</h2>`;
-              document.getElementById('result-filme').innerHTML = `<h2 id="result-nick">${data.filmes}</h2>`;
-              document.getElementById('result-listas').innerHTML = `<h2 id="result-nick">${data.listas}</h2>`;
-              document.getElementById('result-seguindo').innerHTML = `<h2 id="result-nick">${data.seguindo}</h2>`;
-              document.getElementById('result-seguidores').innerHTML = `<h2 id="result-nick">${data.seguidores}</h2>`;
-          }
-      } catch (err) {
-          console.error(err);
-      }
-    }
+                <div class="like-review">
+                    <i class="bi bi-heart-fill"></i>
+                    <p>Like review</p>
+                    <span>2 likes</span>
+                </div>
+            </div>
 
-    window.onload = buscarUsuario();
-    </script>
+                    <!-- LA LA LAND -->
+            <div class="review-container">
+                <div class="review-content">
+                    <img src="images/posters/lalaland.jpg" alt="">
+                    <div class="user-title-stars">
+                        <div class="usuario">
+                            <img src="images/iconos-usuarios/chiaruza.jpg">
+                            <a href="#">chiaruza</a>
+                        </div>
+                        <h5>La La Land</h5><span>2016</span>
+                        <div class="estrellas estrellas-review">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-chat-left-fill"></i>
+                            <span>1</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="review-text">
+                    <p>Good news for everyone who hates this film: this is the first time I've watched it that made me go "hmmm okay parts of this movie are very very corny." Bad news for those same people: I still think the opening is so beautiful and celebratory and exuberant in a way I want more movies to be, I still think Emma Stone is so fucking fantastic and deserved the Best Actress Oscar, and Damien Chazelle deserved his Best Director Oscar! This movie rules!!!!!!!!</p>
+                </div>
+                <div class="like-review">
+                    <i class="bi bi-heart-fill"></i>
+                    <p>Like review</p>
+                    <span>5 likes</span>
+                </div>
+            </div>
+        </div>
+
+    <!-- SEGUNDA COLUMNA -->
+        <div class="columna">
+
+                    <!-- THE BATMAN REVIEW -->
+            <div class="review-container">
+                <div class="review-content">
+                    <img src="images/posters/the-batman.jpg" alt="">
+                    <div class="user-title-stars">
+                        <div class="usuario">
+                            <img src="images/iconos-usuarios/eltomi.jpg">
+                            <a href="#">eltomi</a>
+                        </div>
+                        <h5>The Batman</h5><span>2022</span>
+                        <div class="estrellas estrellas-review">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-chat-left-fill"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="review-text">
+                    <p>There is a moment where Bruce Wayne puts on sunglasses before eating blueberries in his ornate gothic penthouse and I thought to myself, "This is exactly how it should be."</p>
+                </div>
+                <div class="like-review">
+                    <i class="bi bi-heart-fill"></i>
+                    <p>Like review</p>
+                    <span>24 likes</span>
+                </div>
+            </div>
+
+                    <!-- ROCKY II REVIEW -->
+            <div class="review-container rocky">
+                <div class="review-content">
+                    <img src="images/posters/rocky-ii.jpg" alt="">
+                    <div class="user-title-stars">
+                        <div class="usuario">
+                            <img src="images/iconos-usuarios/nahuu.jpg">
+                            <a href="#">nahuutwm</a>
+                        </div>
+                        <h5>Rocky ii</h5><span>1979</span>
+                        <div class="estrellas estrellas-review">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-chat-left-fill"></i>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="review-text">
+                    <p>Me fascina como cada película de Rocky termina tan arriba, querés salir a entrenar y subirte a un ring inmediatamente. <br> <br>
+
+                        En esta segunda parte tenemos una revancha que ni el mismo Rocky quería. Pese a ser burlado y humillado constantemente, pese a dejar su ego de lado mientras que su rival es todo y puramente ego, lo único que quería es una oportunidad de tener una vida normal. A pesar de que se sabe y anhela como boxeador, de la misma forma sabe que esa vida no es lo mejor para su mujer y su futuro hijo, por eso busca con uñas y dientes aferrarse a un trabajo tradicional. <br> <br>
+                        
+                        Finalmente, Rocky decide volver a subirse al ring. No por él, sino por el prójimo, por su familia. Porque luego de caer Adrian en coma, el pobre hombre reducido a su mínima expresión busca refugio en la fe. Si en la primera película, lo que se daba era un choque de ideologías políticas aquí se da un choque de ideologías y creencias. El egoísmo, edonismo y culto al hombre representado por Apollo Creed contra el hombre humilde que sirve y confía en Dios, sellado en ese último agradecimiento de Rocky en el ring. Rocky entiende que no hay otra forma de darle la vida que merecen a su familia y de volver a recuperar su honor que obtener esa revancha y luchar por lo que merece.</p>
+                </div>
+                <div class="like-review">
+                    <i class="bi bi-heart-fill"></i>
+                    <p>Like review</p>
+                    <span>21 likes</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<!-- ============== LIST FROM FRIENDS =============== -->
+
+<div class="container margin-top">
+    <div class="sobretodo">
+        <a href="#">New From Friends</a>
+        <a href="#">More</a>
+    </div>
+</div>
+
+<div class="container lists">
+
+    <div class="listas-container">
+        
+        <div class="lista">
+            <ul class="posters-apilados">
+                
+                <li class="poster1"><img src="images/posters/licorice-pizza.jpg" alt=""></li>
+                <li class="poster2"><img src="images/posters/phantom-thread.jpg" alt=""></li>
+                <li class="poster3"><img src="images/posters/magnolia.jpg" alt=""></li>
+                <li class="poster4"><img src="images/posters/boogie-nights.jpg" alt=""></li>
+                <li class="poster5"><img src="images/posters/the-master.jpg" alt=""></li>
+
+            </ul>
+
+            <div class="titulo-usuario">
+                <h5>PTA Ranking</h5>    
+                <div class="usuario-lista">
+                    <img src="images/iconos-usuarios/citric.png">
+                    <a href="#">citric y critico</a>
+                    <i class="bi bi-heart-fill"></i>
+                    <p>2</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lista">
+            <ul class="posters-apilados">
+                
+                <li class="poster1"><img src="images/posters/licorice-pizza.jpg" alt=""></li>
+                <li class="poster2"><img src="images/posters/spencer.jpg" alt=""></li>
+                <li class="poster3"><img src="images/posters/the-batman.jpg" alt=""></li>
+                <li class="poster4"><img src="images/posters/ford-v-ferrari.jpg" alt=""></li>
+                <li class="poster5"><img src="images/posters/lalaland.jpg" alt=""></li>
+
+            </ul>
+
+            <div class="titulo-usuario">
+                <h5>2021</h5>
+                <div class="usuario-lista">
+                    <img src="images/iconos-usuarios/fer-dumas.jpg">
+                    <a href="#">Fer Dumas</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lista margin-bottom">
+            <ul class="posters-apilados">
+                
+                <li class="poster1"><img src="images/posters/spider-man-2.jpg" alt=""></li>
+                <li class="poster2"><img src="images/posters/unbreakable.jpg" alt=""></li>
+                <li class="poster3"><img src="images/posters/the-batman.jpg" alt=""></li>
+                <li class="poster4"><img src="images/posters/spiderman.jpg" alt=""></li>
+                <li class="poster5"><img src="images/posters/logan.jpg" alt=""></li>
+
+            </ul>
+
+            <div class="titulo-usuario">
+                <h5>Mis Favoritas Superheroes</h5>
+                <div class="usuario-lista">
+                    <img src="images/iconos-usuarios/yo.jpg">
+                    <a href="#">facubeck</a>
+                    <i class="bi bi-heart-fill"></i>
+                    <p>2.323</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    
+
+</div>
+
+
+<!-- ============== POPULAR LISTS =============== -->
+
+<div class="margin-30"></div>
+<div class="container">
+    <div class="sobretodo">
+        <a href="#">Popular Lists</a>
+        <a href="#">More</a>
+    </div>
+</div>
+
+<div class="container popular-lists">
+    <div class="listas-container">
+
+                <!-- PRIMER LISTA -->
+        <div class="lista">
+            <ul class="posters-apilados">
+                
+                <li class="poster1"><img src="images/posters/the-northman-movie-poster.jpg" alt=""></li>
+                <li class="poster2"><img src="images/posters/the-batman.jpg" alt=""></li>
+                <li class="poster3"><img src="images/posters/deep-water-movie-poster.jpg" alt=""></li>
+                <li class="poster4"><img src="images/posters/x-movie-poster.jpg" alt=""></li>
+                <li class="poster5"><img src="images/posters/kimi-movie-poster.jpg" alt=""></li>
+
+            </ul>
+
+            <div class="titulo-usuario">
+                <h5>we are getting FED this year</h5>
+                <div class="usuario-lista">
+                    <img src="images/iconos-usuarios/naturebeam.jpg">
+                    <a href="#">naturebean</a>
+                    <i class="bi bi-heart-fill"></i>
+                    <p>1.792</p>
+                </div>
+            </div>
+
+        </div>
+                <!-- SEGUNDA LISTA -->
+        <div class="lista">
+            <ul class="posters-apilados">
+                
+                <li class="poster1"><img src="images/posters/spider-man-2.jpg" alt=""></li>
+                <li class="poster2"><img src="images/posters/unbreakable.jpg" alt=""></li>
+                <li class="poster3"><img src="images/posters/the-batman.jpg" alt=""></li>
+                <li class="poster4"><img src="images/posters/spiderman.jpg" alt=""></li>
+                <li class="poster5"><img src="images/posters/logan.jpg" alt=""></li>
+
+            </ul>
+
+            <div class="titulo-usuario">
+                <h5>Mis Favoritas Superheroes</h5>
+                <div class="usuario-lista">
+                    <img src="images/iconos-usuarios/yo.jpg">
+                    <a href="#">facubeck</a>
+                    <i class="bi bi-heart-fill"></i>
+                    <p>2.323</p>
+                </div>
+            </div>
+
+        </div>
+        
+                <!-- TERCER LISTA -->
+        <div class="lista">
+            <ul class="posters-apilados">
+                
+                <li class="poster1"><img src="images/posters/licorice-pizza.jpg" alt=""></li>
+                <li class="poster2"><img src="images/posters/magnolia.jpg" alt=""></li>
+                <li class="poster3"><img src="images/posters/the-master.jpg" alt=""></li>
+                <li class="poster4"><img src="images/posters/boogie-nights.jpg" alt=""></li>
+                <li class="poster5"><img src="images/posters/phantom-thread.jpg" alt=""></li>
+
+            </ul>
+
+            <div class="titulo-usuario">
+                <h5>my Paul Thomas ranking</h5>    
+                <div class="usuario-lista">
+                    <img src="images/iconos-usuarios/cooper.jpg">
+                    <a href="#">cooperHoffman</a>
+                    <i class="bi bi-heart-fill"></i>
+                    <p>869</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+</div>
+
+
+<!-- ============== RECENT STORIES =============== -->
+
+<div class="margin-30"></div>
+<div class="container">
+    <div class="sobretodo">
+        <a href="#">Recent Stories</a>
+        <a href="#">All Hqs</a>
+    </div>
+</div>
+    
+
+<div class="container">
+    <div class="recent-stories">
+
+            <!-- COLUMNA 1 -->
+        <section>
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-1.jpg" alt="">
+                <div class="usuario">
+                    <img src="images/recent-stories/icon-1.jpg" alt="">
+                    <h4>Festiville</h4>
+                </div>
+                <div class="contenido">
+                    <h5>Casey Thomas Brown’s Conversational Comfort Films (SIFF ’22)</h5>
+                    <p>Actor Casey Thomas Brown shares ten of his favorite conversational character studies as his latest film, Megan Griffiths’ I’ll Show You Mine, premieres at the Seattle International Film Festival.</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-6.jpg" alt="">
+                <div class="usuario">
+                    <img src="images/recent-stories/icon-6.jpg" alt="">
+                    <h4>Oscilloscope Laboratories</h4>
+                </div>
+                <div class="contenido">
+                    <h5>The Pragmatic Rebellion of Roger Corman’s The Trip by Jessica Ritchey</h5>
+                    <p>Pre-production for a movie rarely involves dropping acid, yet in the spirit of due diligence, producer/director Roger Corman spent a weekend in Big Sur, California doing this essential prep work for his 1967 odyssey The Trip. At the time, Corman was one of the main forces behind American International Pictures (AIP), a powerhouse independent that filled drive-ins and neighborhood theaters with titles as diverse as Viking Women vs. The Sea Serpent and The Wild Angels. Corman had originally studied to…</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-7.jpg" alt="">
+                <div class="usuario">
+                    <img src="images/recent-stories/icon-7.jpg" alt="">
+                    <h4>Bookhouse Film Club</h4>
+                </div>
+                <div class="contenido">
+                    <h5>Friday Night Film - MACBETH</h5>
+                    <p>Read this story on our website here.</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+        </section>
+
+            <!-- COLUMNA 2 -->
+        <section class="columna-2">
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-2.jpg" alt="">
+                <div class="usuario">
+                    <img src="/images/recent-stories/icon-2.jpg" alt="">
+                    <h4>Film Independent</h4>
+                </div>
+                <div class="contenido">
+                    <h5>What is Fiscal Sponsorship? Learn how to get money for your film project.</h5>
+                    <p>Looking for money for next film, be it a narrative feature, documentary, or multimedia project? Consider applying for fiscal sponsorship though Film Independent.</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-5.jpg" alt="">
+                <div class="usuario">
+                    <img src="/images/recent-stories/icon-3.jpg" alt="">
+                    <h4>MUBI UK</h4>
+                </div>
+                <div class="contenido">
+                    <h5>Double Vision: Jane Schoenbrun’s “We’re All Going to the World’s Fair”</h5>
+                    <p>Jane Schoenbrun's creepypasta-themed film collapses the boundary between what's in front of and behind the screen.</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-8.jpg" alt="">
+                <div class="usuario">
+                    <img src="/images/recent-stories/icon-1.jpg" alt="">
+                    <h4>Horrorville</h4>
+                </div>
+                <div class="contenido">
+                    <h5>‘Bleed With Me’ DVD Giveaway Courtesy of RLJE Films & Shudder</h5>
+                    <p>Win Your Own Copy of BLEED WITH ME on DVD!</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+        </section>
+        
+            <!-- COLUMNA 3 -->
+        <section class="columna-2">
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-3.jpg">
+                <div class="usuario">
+                    <img src="images/recent-stories/icon-3.jpg">
+                    <h4>MUBI UK</h4>
+                </div>
+                <div class="contenido">
+                    <h5>Notebook Primer: Charlie Chaplin</h5>
+                    <p>Written by Megan Feeney</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-4.jpg">
+                <div class="usuario">
+                    <img src="images/recent-stories/icon-4.jpg">
+                    <h4>Cinema St. Louis</h4>
+                </div>
+                <div class="contenido">
+                    <h5>Review: ‘The Northman’</h5>
+                    <p>Director Robert Eggers' bloody Viking revenge epic The Northman opens in wide release on Friday. Critic Andrew Wyatt has a review:</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <img src="images/recent-stories/imagen-9.jpg">
+                <div class="usuario">
+                    <img src="images/recent-stories/icon-3.jpg">
+                    <h4>MUBI</h4>
+                </div>
+                <div class="contenido">
+                    <h5>Cannes 2022. Lineup</h5>
+                    <p>The Festival de Cannes has announced the lineup for the official selection, including the Competition and Un Certain Regard sections, as well as special screenings, for the 75th edition of the festival.</p>
+                    <a href="#">READ STORY</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+    
+
+
+<!-- ============== RECENT SHOWDOWNS AND RECENT NEWS =============== -->
+
+<!-- === RECENT SHOWDOWNS -->
+<div class="container recent-showdowns-and-news">
+    <div class="sobretodo">
+        <a href="#">Recent Showdowns</a>
+        <a href="#">More</a>
+    </div>
+
+    <div class="recent">
+        <div class="showdown-container">
+            <img src="images/recent-news-images/1.jpg" alt="">
+            <h4>Sea of Trees</h4>
+            <h5>Best Films set in forests or jungles</h5>
+        </div>
+
+        <div class="showdown-container">
+            <img src="images/recent-news-images/2.jpg" alt="">
+            <h4>Last Action Hero</h4>
+            <h5>Greatest action stars</h5>
+        </div>
+        <div class="showdown-container">
+            <img src="images/recent-news-images/3.jpg" alt="">
+            <h4>Underworld</h4>
+            <h5>Best under-seen mafia films</h5>
+        </div>
+    </div>
+
+
+    <!-- === RECENT NEWS -->
+    <div class="sobretodo recent-news">
+        <a href="#">Recent News</a>
+        <a href="#">More</a>
+    </div>
+
+    <div class="recent">
+        <div class="showdown-container">
+            <img src="images/recent-news-images/4.jpg" alt="">
+            <h4>The Shimmering Screen</h4>
+            <h5><span>We’re All Going to the World’s Fair’s</span> director on finding meaning in cyberspace.</h5>
+        </div>
+
+        <div class="showdown-container">
+            <img src="images/recent-news-images/5.jpg" alt="">
+            <h4>French Kisses</h4>
+            <h5>Jacques Audiard on bringing feminine energy to his latest,<span> Paris, 13th District.</span></h5>
+        </div>
+        <div class="showdown-container none">
+            <img src="images/recent-news-images/6.jpg" alt="">
+            <h4>Step By Step</h4>
+            <h5>Brendan Muldowney and his <span>The Cellar </span> stars on the terrors of parenting.</h5>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<!-- ============== FOOTER =============== -->
+
+<footer>
+    <div class="container">
+        <ul>
+            <li>About</li>
+            <li>News</li>
+            <li>Pro</li>
+            <li>Apps</li>
+            <li>Podcast</li>
+            <li class="none">Year in Review</li>
+            <li class="none">Gift Guide</li>
+            <li class="none">Help</li>
+            <li class="none">Terms</li>
+            <li class="none">API</li>
+            <li class="none">Contact</li>
+            <li class="more">More...</li>
+            <div class="social-logos">
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-tiktok"></i>
+            </div>
+        </ul>
+
+        <p>© Letterboxd Limited. Made by <span>fans</span> in Aotearoa. <span class="br"> <span>Film data</span> from <span>TMDb.</span> <span>Mobile site.</span> </span></p>
+
+        <div class="logo-none">
+            <div class="social-logos">
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-tiktok"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+<script src="scripts/index.js"></script>
+
+
 </body>
+</html>

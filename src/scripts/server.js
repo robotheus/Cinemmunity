@@ -195,6 +195,8 @@ app.get('/styles/style_perfil.css', (req, res) => {
 
 app.use('/img', express.static(path.join(__dirname, '..', '..', 'img')));
 
+app.use('/images', express.static(path.join(__dirname, '..', 'images')));
+
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });

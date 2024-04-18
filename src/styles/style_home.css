@@ -45,14 +45,19 @@ main h2 {
 }
 
 #mauricio {
-    width: 200px;
+    width: auto;
     height: auto;
 }
 
 #topo {
+  max-width: 750px;
+  height: 4.5rem;
+  margin: 0 auto;
+  background-color: #14181c;
+  color: white;
   display: flex;
-  justify-content: center;
-  
+  justify-content: space-between;
+  font-family: graphik-bold;
 }
 
 .movies img {
@@ -69,7 +74,8 @@ main h2 {
 }
 
 .movies img:hover {
-  transform: scale(1.1);
+  outline: 3px solid #2bc016;
+  transition: 300ms;
 }
 
 #titulo_p {
