@@ -1,722 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="../images/movie-clapper-open.png" />
     <link rel="stylesheet" href="../styles/style_perfil.css" />
     <link
-      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"/>
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <title>Profile</title>
+    <body class="no-roll" id="body">
+  </head>
 
-<body class="no-roll" id="body">
-
-</head>
-    <header>
-      <div class="relleno">
-        <header class="header">
-          <div class="logo-container">
-            <a href="timeline.html" class="link">
-              <img src="../images/7arte.png" alt="Logo Letterboxd" />
-              <h1>CINEmmunity</h1>
+  <header>
+    <div class="relleno">
+      <header class="header">
+        <div class="logo-container">
+          <a href="timeline.html" class="link">
+            <img src="../images/7arte.png" alt="Logo Letterboxd" />
+            <h1>CINEmmunity</h1>
+          </a>
+        </div>
+          
+        <ul class="lista-navbar">
+          <li>
+            <a href="#">
+              <img src="../images/iconos-usuarios/Elisa Tuler2.jpg" />Elisa
             </a>
-          </div>
-          <ul class="lista-navbar">
-            <li>
-              <a href="#"
-                ><img src="../images/iconos-usuarios/Elisa Tuler2.jpg" />Elisa
-                <i class="bi bi-chevron-down"></i
-              ></a>
-            </li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Listas</a></li>
-            <li>
-              <a href="#"><i class="bi-search"></i></a>
-            </li>
-            <li><button id="botao-sair">SAIR</button></li>
-          </ul>
-          <div class="iconos-resize">
-            <i class="bi bi-plus-lg"></i>
-            <i class="bi bi-list-ul"></i>
-            <i class="bi-search"></i>
-          </div>
+          </li>
+          <li><a href="filmes.html">Filmes</a></li>
+          <li><a href="listas.html">Listas</a></li>
+          <li><a href="#"><i class="bi-search"></i></a></li>
+          <li><button id="botao-sair">SAIR</button></li>
+        </ul>
+        <div class="iconos-resize">
+          <i class="bi bi-plus-lg"></i>
+          <i class="bi bi-list-ul"></i>
+          <i class="bi-search"></i>
+        </div>
         </header>
-      </div>
-
-      <!-- === FONDO DEGRADE === -->
-      <div class="degrade"></div>
-    </header>
-
-    <!-- PROFILE SECTION (USERNAME, FOLLOWERS, PROFILE PICTURE) -->
-    <div class="container profile-container">
-      <div class="left-side">
-        <!-- desktop version -->
-        <a href="" class="desktop-profile"
-          ><img src="../images/iconos-usuarios/Elisa Tuler2.jpg" alt="PROFILE PICTURE"
-        /></a>
-        <section class="desktop-profile">
-          <h1>Elisa</h1>
-          <button>Edit Profile</button>
-          <h4>Amo cinema</h4>
-          <p><i class="bi bi-geo-fill"></i>Minas Gerais, Brasil</p>
-        </section>
-      </div>
-
-      <div class="right-side">
-        <div>
-          <h4>23</h4>
-          <p>films</p>
-        </div>
-        <div>
-          <h4>7</h4>
-          <p>listas</p>
-        </div>
-        <div>
-          <h4>5</h4>
-          <p>following</p>
-        </div>
-        <div>
-          <h4>5</h4>
-          <p>followers</p>
-        </div>
-      </div>
     </div>
+    
+    <div class="degrade"></div>
+  </header>
+
+<!-- PROFILE SECTION (USERNAME, FOLLOWERS, PROFILE PICTURE) -->
+<div class="container profile-container">
+  <div class="left-side">
+    <a href="" class="desktop-profile"><img src="../images/iconos-usuarios/Elisa Tuler2.jpg" alt="PROFILE PICTURE"/></a>
+    <section class="desktop-profile">
+      <h1>Elisa</h1>
+      <h4> Sou professora e amo cinema.</h4>
+      <p><i class="bi bi-geo-fill"></i>Minas Gerais, Brasil</p>
+    </section>
+  </div>
+
+  <div class="right-side">
+    <div>
+      <h4>40</h4>
+      <p>films</p>
+    </div>
+    <div>
+      <h4>7</h4>
+      <p>listas</p>
+    </div>
+    <div>
+      <h4>6</h4>
+      <p>following</p>
+    </div>
+    <div>
+      <h4>6</h4>
+      <p>followers</p>
+    </div>
+  </div>
+</div>
 
     <!-- MAIN -->
-
-    <section class="container content">
-      <main>
-        <!-- favourite films -->
-        <div class="sobretodo">
-          <a href="#">Filmes favoritos</a>
-        </div>
-        <section class="recent-from-friends popular-poster">
-          <ul class="posters-list">
-            <!-- POSTER 1 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="../images/posters/ratatouille.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-            </li>
-            <!-- POSTER 2 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="../images/posters/ouatih.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-            </li>
-            <!-- POSTER 3 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="../images/posters/top-gun.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-            </li>
-            <!-- POSTER 4 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="../images/posters/thing.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- recent activity -->
-        <div class="sobretodo">
-          <a href="#">Recent Activity</a>
-          <a href="#">All</a>
-        </div>
-        <section class="recent-from-friends new-poster">
-          <ul class="posters-list">
-            <!-- POSTER 1 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="images/posters/top-gun.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-              <div class="estrellas">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-justify-left" style="margin-left: 5px"></i>
-              </div>
-            </li>
-            <!-- POSTER 2 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="images/posters/fabelmans.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-              <div class="estrellas">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-justify-left" style="margin-left: 5px"></i>
-              </div>
-            </li>
-            <!-- POSTER 3 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="images/posters/da-vinci.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-              <div class="estrellas repeat">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-            </li>
-            <!-- POSTER 4 -->
-            <li class="poster-container">
-              <div class="poster-content">
-                <img src="images/posters/american-psycho.jpg" class="poster" />
-                <div class="action-poster">
-                  <i class="bi bi-eye-fill"></i>
-                  <i class="bi bi-suit-heart-fill"></i>
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-              <div class="estrellas">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-                <i
-                  class="bi bi-arrow-repeat repeat"
-                  style="margin-left: 5px"
-                ></i>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- recent reviews -->
-        <div class="sobretodo recent-reviews-sobretodo">
-          <a href="#">Recent Reviews</a>
-          <a href="#">More</a>
-        </div>
-
-        <!-- primera review -->
-        <div class="container recent-reviews-container">
-          <div class="poster">
-            <img src="images/posters/top-gun.jpg" />
-          </div>
-
-          <div class="texto">
-            <h5>Top Gun: Maverick</h5>
-            <span>2022</span>
-            <div class="review-info">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill" style="margin-right: 5px;"></i>
-              <p>Rewatched by <span>facubeck</span><div class="fecha">02 Feb 2023</div></p>
-            </div>
-            <div class="review-text">Para esto se inventó el cine.</div>
-            <div class="like-review">
-              <i class="bi bi-heart-fill"></i>
-              <p>No likes yet</p>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <div class="underline-review container"></div>
-
-        <!-- segunda review -->
-        <div class="container recent-reviews-container">
-          <div class="poster">
-            <img src="images/posters/fabelmans.jpg" />
-          </div>
-
-          <div class="texto">
-            <h5>The Fabelmans</h5>
-            <span>2022</span>
-            <div class="review-info">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill" style="margin-right: 5px;"></i>
-              <p>Watched by <span>facubeck</span><div class="fecha">01 Feb 2023</div></p>
-            </div>
-            <div class="review-text">
-              Godard decía que el cine eran 24 verdades por segundo. Luego, De
-              Palma lo contradijo con "el cine miente 24 veces por segundo". Acá
-              Spielberg encuentra una posición intermedia, y dictamina "el cine
-              miente 24 veces por segundo para exponer la verdad". Varias
-              secuencias así lo demuestran, pero en su completud, The Fabelmans
-              es eso; la búsqueda de su verdad a partir de una ficción, donde es
-              tan importante entender la función, desde cada una de sus áreas,
-              del cine, y no sólo del cine, del arte en sí, como también es
-              obligación estudiar y repensar nuestro pasado para "encontrar
-              nuestro horizonte".
-            </div>
-            <div class="like-review">
-              <i class="bi bi-heart-fill"></i>
-              <p>No likes yet</p>
-              <span></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- popular reviews -->
-        <div class="sobretodo" style="margin-top: 50px">
-          <a href="#">Popular Reviews</a>
-          <a href="#">More</a>
-        </div>
-
-        <!-- primera review -->
-        <div class="container recent-reviews-container">
-          <div class="poster">
-            <img src="images/posters/la-mano-de-dios.jpg" />
-          </div>
-
-          <div class="texto">
-            <h5>The Hand of God</h5>
-            <span>2021</span>
-            <div class="review-info">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill" style="margin-right: 5px;"></i>
-              <p>Rewatched by <span>facubeck</span> <div class="fecha">20 Dec 2022</div></p>
-            </div>
-            <div class="review-text">
-              Preciosa pelicula. Las ganas de vivir en italia que te generan son
-              impresionantes. Imaginate estar una tarde, tomando algo y viendo
-              al Diego en una de esas teles viejas. Hermoso.
-            </div>
-            <div class="like-review">
-              <i class="bi bi-heart-fill"></i>
-              <p>2 likes</p>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <div class="underline-review container"></div>
-
-        <!-- segunda review -->
-        <div class="container recent-reviews-container">
-          <div class="poster">
-            <img src="images/posters/tenet.jpg" />
-          </div>
-
-          <div class="texto">
-            <h5>Tenet</h5>
-            <span>2020</span>
-            <div class="review-info">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill" style="margin-right: 5px;"></i>
-              <p>Watched by <span>facubeck</span></p>
-              <div class="fecha">
-                <p>03 May 2022</p>
-                <i class="bi bi-chat-left-fill"></i>
-                <span>4</span>
-              </div>
-
-            </div>
-            <div class="review-text">
-              No se entiende nada maestro. <br /><br />
-              La agarré en la tele y dije: voy a darle una segunda oportunidad a
-              ver si ahora me gusta. No, no pasó. No hay un solo plano que se te
-              quede grabado. Parece que hicieron esto unicamente para mostrar el
-              despliegue que pueden hacer con el enorme presupuesto que tienen.
-              <br /><br />
-              Lo único que rescato es la musica; solo por el hecho de que cuando
-              la vi por primera vez en Imax, me gustó.
-            </div>
-            <div class="like-review">
-              <i class="bi bi-heart-fill"></i>
-              <p>No likes yet</p>
-              <span></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- following -->
-        <div class="sobretodo following-title">
-          <a href="#">Following</a>
-          <a href="#">23</a>
-        </div>
-        <section class="following">
-          <img src="images/iconos-usuarios/citric.png" />
-          <img src="images/iconos-usuarios/luquita.png" />
-          <img src="images/iconos-usuarios/luca.jpg" />
-          <img src="images/iconos-usuarios/chiaruza.jpg" />
-          <img src="images/iconos-usuarios/jaypito.jpg" />
-          <img src="images/iconos-usuarios/karsten.jpg" />
-          <img src="images/iconos-usuarios/cine-bestia.jpg" />
-          <img src="images/iconos-usuarios/cooper.jpg" />
-          <img src="images/iconos-usuarios/eltomi.jpg" />
-          <img src="images/iconos-usuarios/fer-dumas.jpg" />
-          <img src="images/iconos-usuarios/martin.jpg" />
-          <img src="images/iconos-usuarios/nahuu.jpg" />
-          <img src="images/iconos-usuarios/naturebeam.jpg" />
-          <img src="images/iconos-usuarios/kurt.jpg" />
-          <img src="images/iconos-usuarios/paul-thomas.jpg" />
-          <img src="images/iconos-usuarios/1.jpeg" />
-          <img src="images/iconos-usuarios/2.jfif" />
-          <img src="images/iconos-usuarios/travis.jpg" />
-        </section>
-      </main>
-
-      <!-- right part of the page / aside -->
-      <aside>
-        <!-- watchlist in profile -->
-        <img src="images/get-pro-square.png" class="cursor-pointer image1" />
-        <img src="images/pro-mobile-o.png" class="cursor-pointer image2" />
-
-        <div class="sobretodo">
-          <a href="#">Watchlist</a>
-          <a href="#">21</a>
-        </div>
-        <!-- watchlist list -->
-        <div class="container">
-          <div class="listas-container listas-profile">
-            <div class="lista lista-profile">
-              <ul class="posters-apilados">
-                <li class="poster1">
-                  <img src="images/posters/avatar.jpg" alt="" />
-                </li>
-                <li class="poster2">
-                  <img src="images/posters/diego-maradona.jpg" alt="" />
-                </li>
-                <li class="poster3">
-                  <img src="images/posters/apocalypse-now.jpg" alt="" />
-                </li>
-                <li class="poster4">
-                  <img src="images/posters/the-apartment.jpg" alt="" />
-                </li>
-                <li class="poster5">
-                  <img src="images/posters/kimi-movie-poster.jpg" alt="" />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- diary -->
-        <div class="sobretodo">
-          <a href="#">Diary</a>
-          <a href="#">113</a>
-        </div>
-
-        <div class="diary bottom-line">
-          <h3 class="month-icon">
-            <div class="palito"></div>
-            <div class="palito"></div>
-            <div class="palito"></div>
-            Feb
-          </h3>
-          <ul class="diary-list">
-            <li>
-              <span>2</span>
-              <p>Top Gun: Maverick</p>
-            </li>
-            <li>
-              <span>1</span>
-              <p>The Fabelmans</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="diary">
-          <h3 class="month-icon">
-            <div class="palito"></div>
-            <div class="palito"></div>
-            <div class="palito"></div>
-            Jan
-          </h3>
-          <ul class="diary-list">
-            <li>
-              <span>29</span>
-              <p>The Da Vinci Code</p>
-            </li>
-            <li>
-              <span>27</span>
-              <p>American Psycho</p>
-            </li>
-            <li>
-              <span>25</span>
-              <p>West Side Story</p>
-            </li>
-            <li>
-              <span>22</span>
-              <p>Babylon</p>
-            </li>
-            <li>
-              <span>19</span>
-              <p>Blow Out</p>
-            </li>
-            <li>
-              <span>18</span>
-              <p>Aftersun</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- ratings -->
-        <div class="sobretodo">
-          <a href="#">Ratings</a>
-          <a href="#">128</a>
-        </div>
-
-        <div class="container ratings">
-          <ul>
-            <i class="bi bi-star-fill star first-star"></i>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <li class="fila"></li>
-            <div class="stars">
-              <i class="bi bi-star-fill star"></i>
-              <i class="bi bi-star-fill star"></i>
-              <i class="bi bi-star-fill star"></i>
-              <i class="bi bi-star-fill star"></i>
-              <i class="bi bi-star-fill star"></i>
-            </div>
-          </ul>
-        </div>
-
-        <!-- recent lists -->
-        <div class="sobretodo recent-lists">
-          <a href="#">Recent Lists</a>
-          <a href="#">7</a>
-        </div>
-
-        <!-- list 1-->
-        <div class="container">
-          <div class="listas-container listas-profile">
-            <div class="lista lista-profile">
-              <ul class="posters-apilados">
-                <li class="poster1">
-                  <img src="images/posters/spencer.jpg" alt="" />
-                </li>
-                <li class="poster2">
-                  <img src="images/posters/the-thing.jpg" alt="" />
-                </li>
-                <li class="poster3">
-                  <img src="images/posters/the-apartment.jpg" alt="" />
-                </li>
-                <li class="poster4">
-                  <img src="images/posters/lalaland.jpg" alt="" />
-                </li>
-                <li class="poster5">
-                  <img src="images/posters/top-gun.jpg" alt="" />
-                </li>
-              </ul>
-
-              <sub class="titulo-lista-profile">
-                <h2>2 0 2 2</h2>
-                <h3>62 films</h3>
-              </sub>
-            </div>
-          </div>
-        </div>
-
-        <!-- list 2-->
-        <div class="container">
-          <div class="listas-container listas-profile">
-            <div class="lista lista-profile">
-              <ul class="posters-apilados">
-                <li class="poster1">
-                  <img src="images/posters/spider-man-2.jpg" alt="" />
-                </li>
-                <li class="poster2">
-                  <img src="images/posters/spider-man-1.jpg" alt="" />
-                </li>
-                <li class="poster3">
-                  <img
-                    src="images/posters/spider-man-into-the-spider-verse.jpg"
-                    alt=""
-                  />
-                </li>
-                <li class="poster4">
-                  <img
-                    src="images/posters/spider-man-no-way-home].jpg"
-                    alt=""
-                  />
-                </li>
-                <li class="poster5">
-                  <img src="images/posters/spiderman.jpg" alt="" />
-                </li>
-              </ul>
-
-              <sub class="titulo-lista-profile">
-                <h2>Ranking Spider-Man</h2>
-                <h3>9 films</h3>
-              </sub>
-            </div>
-          </div>
-        </div>
-
-        <!-- list 3-->
-        <div class="container">
-          <div class="listas-container listas-profile">
-            <div class="lista lista-profile">
-              <ul class="posters-apilados">
-                <li class="poster1">
-                  <img
-                    src="images/posters/the-northman-movie-poster.jpg"
-                    alt=""
-                  />
-                </li>
-                <li class="poster2">
-                  <img src="images/posters/dont-worry-darling.jpg" alt="" />
-                </li>
-                <li class="poster3">
-                  <img src="images/posters/top-gun.jpg" alt="" />
-                </li>
-                <li class="poster4">
-                  <img
-                    src="images/posters/everything-everywhere-all-at-once.jpg"
-                    alt=""
-                  />
-                </li>
-                <li class="poster5">
-                  <img src="images/posters/lightyear.jpg" alt="" />
-                </li>
-              </ul>
-
-              <sub class="titulo-lista-profile">
-                <h2>Cine en 2022</h2>
-                <h3>22 films</h3>
-              </sub>
-            </div>
-          </div>
-        </div>
-
-        <!-- activity section -->
-        <div id="activity">
-          <div class="sobretodo">
-            <a href="#">Activity</a>
-            <a href="#"><i class="bi bi-lightning-charge-fill"></i>All</a>
-          </div>
-        </div>
-
-        <!-- activity list -->
-        <div>
-          <ul class="activity-ul">
-            <li>
-              <div class="bola"></div>
-              <main>
-                You watched and rated <a href="#">Top Gun: Maverick</a> ★★★★★ on
-                Thursday Feb 02, 2023 2d
-              </main>
-            </li>
-            <li>
-              <div class="bola"></div>
-              <main>You added <a href="#">Avatar</a> to your watchlist 2d</main>
-            </li>
-            <li>
-              <div class="bola"></div>
-              <main>
-                You watched and rated <a href="#">The Fabelmans</a> ★★★★★ on
-                Wednesday Feb 01, 2023 3d
-              </main>
-            </li>
-            <li>
-              <div class="bola"></div>
-              <main>
-                You liked Ella Kemp’s ★★★★½ review of
-                <a href="#">The Apartment</a> 4d
-              </main>
-            </li>
-            
-          </ul>
-        </div>
-      </aside>
+<section class="container content">
+  <main>
+    <div class="sobretodo following-title">
+      <a href="#">Seguindo</a>
+      <a href="#">6</a>
+    </div>
+    <section class="following">
+      <img src="../images/iconos-usuarios/maxresdefault.jpg" />
+      <img src="../images/iconos-usuarios/file.jpeg" />
+      <img src="../images/iconos-usuarios/file2.jpeg" />
+      <img src="../images/iconos-usuarios/file3.jpeg" />
+      <img src="../images/iconos-usuarios/file4.jpeg" />
+      <img src="../images/iconos-usuarios/Martin_Scorsese_Berlinale_2010_(cropped2).jpg" />
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <ul>
-          <li>About</li>
-          <li>News</li>
-          <li>Pro</li>
-          <li>Apps</li>
-          <li>Podcast</li>
-          <li class="none">Year in Review</li>
-          <li class="none">Gift Guide</li>
-          <li class="none">Help</li>
-          <li class="none">Terms</li>
-          <li class="none">API</li>
-          <li class="none">Contact</li>
-          <li class="more">More...</li>
-          <div class="social-logos">
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-tiktok"></i>
+  <!-- favourite films -->
+    <div class="sobretodo">
+      <a href="#">Filmes favoritos</a>
+    </div>
+    <section class="recent-from-friends popular-poster">
+      <ul class="posters-list">
+        <!-- POSTER 1 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/phantom-thread.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
           </div>
-        </ul>
+        </li>
+        <!-- POSTER 2 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/everything-everywhere-all-at-once.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+        </li>
+        <!-- POSTER 3 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/ford-v-ferrari.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+        </li>
+        <!-- POSTER 4 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/lalaland.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-        <p>
-          © Letterboxd Limited. Made by <span>fans</span> in Aotearoa.
-          <span class="br">
-            <span>Film data</span> from <span>TMDb.</span>
-            <span>Mobile site.</span>
-          </span>
-        </p>
+    <!-- recent activity -->
+    <div class="sobretodo">
+      <a href="#">Filmes vistos recentemente</a>
+    </div>
+    <section class="recent-from-friends new-poster">
+      <ul class="posters-list">
+        <!-- POSTER 1 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/avatar.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-justify-left" style="margin-left: 5px"></i>
+          </div>
+        </li>
+        <!-- POSTER 2 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/fabelmans.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-justify-left" style="margin-left: 5px"></i>
+          </div>
+        </li>
+        <!-- POSTER 3 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/da-vinci.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+          <div class="estrellas repeat">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+        </li>
+        <!-- POSTER 4 -->
+        <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/dont-worry-darling.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i
+              class="bi bi-arrow-repeat repeat"
+              style="margin-left: 5px"
+            ></i>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-        <div class="logo-none">
-          <div class="social-logos">
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-tiktok"></i>
+      <!-- recent reviews -->
+      <div class="sobretodo recent-reviews-sobretodo">
+        <a href="#">Reviews feitos recentemente</a>
+      </div>
+
+      <!-- primera review -->
+      <div class="container recent-reviews-container">
+        <div class="poster">
+          <img src="../images/posters/da-vinci.jpg" />
+        </div>
+
+        <div class="texto">
+          <h5>The da vinci code</h5>
+          <span>2006</span>
+          <div class="review-info">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half" style="margin-right: 5px;"></i>
+          </div>
+          <div class="review-text">Misericordia que filme ruim.</div>
+          <div class="like-review">
+            <i class="bi bi-heart-fill"></i>
+            <p>0 likes</p>
+            <span></span>
           </div>
         </div>
       </div>
-    </footer>
-    <script>
-        document.getElementById('botao-sair').addEventListener('click', async () => {
-            window.location.href = "../index.html";
-        });
-    </script>
-  </body>
+      <div class="underline-review container"></div>
+
+      <!-- segunda review -->
+      <div class="container recent-reviews-container">
+        <div class="poster">
+          <img src="../images/posters/fabelmans.jpg" />
+        </div>
+
+        <div class="texto">
+          <h5>The Fabelmans</h5>
+          <span>2022</span>
+          <div class="review-info">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill" style="margin-right: 5px;"></i>
+          </div>
+          <div class="review-text">
+            Muito inspirador para estudantes de cinema e cativante para aqueles que apreciam a arte.
+          </div>
+          <div class="like-review">
+            <i class="bi bi-heart-fill"></i>
+            <p>1 like</p>
+            <span></span>
+          </div>
+        </div>
+      </div>
+</main>
+
+<!-- right part of the page / aside -->
+<aside>
+  <!-- watchlist in profile -->
+  <div class="sobretodo">
+    <a href="#">Watchlist</a>
+    <a href="#">21</a>
+  </div>
+  <!-- watchlist list -->
+  <div class="container">
+    <div class="listas-container listas-profile">
+      <div class="lista lista-profile">
+        <ul class="posters-apilados">
+          <li class="poster1">
+            <img src="../images/posters/deep-water-movie-poster.jpg" alt="" />
+          </li>
+          <li class="poster2">
+            <img src="../images/posters/diego-maradona.jpg" alt="" />
+          </li>
+          <li class="poster3">
+            <img src="../images/posters/apocalypse-now.jpg" alt="" />
+          </li>
+          <li class="poster4">
+            <img src="../images/posters/the-apartment.jpg" alt="" />
+          </li>
+          <li class="poster5">
+            <img src="../images/posters/kimi-movie-poster.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- diary -->
+  <div class="sobretodo">
+    <a href="#">Diário</a>
+    <a href="#">113</a>
+  </div>
+
+  <div class="diary bottom-line">
+    <h3 class="month-icon">
+      <div class="palito"></div>
+      <div class="palito"></div>
+      <div class="palito"></div>
+      Abr
+    </h3>
+    <ul class="diary-list">
+      <li>
+        <span>22</span>
+        <p>The Da Vinci Code</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>The Fabelmans</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="diary">
+    <h3 class="month-icon">
+      <div class="palito"></div>
+      <div class="palito"></div>
+      <div class="palito"></div>
+      Mar
+    </h3>
+    <ul class="diary-list">
+      <li>
+        <span>27</span>
+        <p>American Psycho</p>
+      </li>
+      <li>
+        <span>25</span>
+        <p>West Side Story</p>
+      </li>
+      <li>
+        <span>22</span>
+        <p>Babylon</p>
+      </li>
+      <li>
+        <span>19</span>
+        <p>Blow Out</p>
+      </li>
+      <li>
+        <span>18</span>
+        <p>Aftersun</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ratings -->
+  <div class="sobretodo">
+    <a href="#">Médias</a>
+    <a href="#">23</a>
+  </div>
+
+  <div class="container ratings">
+    <ul>
+      <i class="bi bi-star-half star first-star"></i>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <li class="fila"></li>
+      <div class="stars">
+        <i class="bi bi-star-fill star"></i>
+        <i class="bi bi-star-fill star"></i>
+        <i class="bi bi-star-fill star"></i>
+        <i class="bi bi-star-fill star"></i>
+        <i class="bi bi-star-fill star"></i>
+      </div>
+    </ul>
+  </div>
+
+  <!-- recent lists -->
+  <div class="sobretodo recent-lists">
+    <a href="#">Listas recentes</a>
+  </div>
+
+  <!-- list 1-->
+  <div class="container">
+    <div class="listas-container listas-profile">
+      <div class="lista lista-profile">
+        <ul class="posters-apilados">
+          <li class="poster1">
+            <img src="../images/posters/spencer.jpg" alt="" />
+          </li>
+          <li class="poster2">
+            <img src="../images/posters/the-thing.jpg" alt="" />
+          </li>
+          <li class="poster3">
+            <img src="../images/posters/the-apartment.jpg" alt="" />
+          </li>
+          <li class="poster4">
+            <img src="../images/posters/lalaland.jpg" alt="" />
+          </li>
+          <li class="poster5">
+            <img src="../images/posters/top-gun.jpg" alt="" />
+          </li>
+        </ul>
+
+        <sub class="titulo-lista-profile">
+          <h2>2 0 2 2</h2>
+          <h3>62 films</h3>
+        </sub>
+      </div>
+    </div>
+  </div>
+
+  <!-- list 2-->
+  <div class="container">
+    <div class="listas-container listas-profile">
+      <div class="lista lista-profile">
+        <ul class="posters-apilados">
+          <li class="poster1">
+            <img src="../images/posters/spider-man-2.jpg" alt="" />
+          </li>
+          <li class="poster2">
+            <img src="../images/posters/spider-man-1.jpg" alt="" />
+          </li>
+          <li class="poster3">
+            <img
+              src="../images/posters/spider-man-into-the-spider-verse.jpg"
+              alt=""
+            />
+          </li>
+          <li class="poster4">
+            <img
+              src="../images/posters/spider-man-no-way-home].jpg"
+              alt=""
+            />
+          </li>
+          <li class="poster5">
+            <img src="../images/posters/spiderman.jpg" alt="" />
+          </li>
+        </ul>
+
+        <sub class="titulo-lista-profile">
+          <h2>Melhores miranhas</h2>
+          <h3>9 films</h3>
+        </sub>
+      </div>
+    </div>
+  </div>
+
+  <!-- list 3-->
+  <div class="container">
+    <div class="listas-container listas-profile">
+      <div class="lista lista-profile">
+        <ul class="posters-apilados">
+          <li class="poster1">
+            <img src="https://a.ltrbxd.com/resized/sm/upload/g4/4m/0c/6s/rD8SvOTCCJ2VIpIV7GUwUKD1Kzc-0-1000-0-1500-crop.jpg?v=e780d1b7d3" alt="" />
+          </li>
+          <li class="poster2">
+            <img src="../images/posters/ratatouille.jpg" alt="" />
+          </li>
+          <li class="poster3">
+            <img src="https://a.ltrbxd.com/resized/film-poster/1/1/3/2/8/4/113284-inside-out-0-1000-0-1500-crop.jpg?v=de03b9b6ef" alt="" />
+          </li>
+          <li class="poster4">
+            <img
+              src="https://a.ltrbxd.com/resized/film-poster/8/6/5/1/1/2/865112-nimona-0-1000-0-1500-crop.jpg?v=23fa6c0b1b"
+              alt=""
+            />
+          </li>
+          <li class="poster5">
+            <img src="../images/posters/lightyear.jpg" alt="" />
+          </li>
+        </ul>
+
+        <sub class="titulo-lista-profile">
+          <h2>Animações divertidas</h2>
+          <h3>22 films</h3>
+        </sub>
+      </div>
+    </div>
+  </div>
+</aside>
+</section>
+
+<script>
+  document.getElementById('botao-sair').addEventListener('click', async () => {
+      window.location.href = "../index.html";
+  });
+</script>
+
+<footer>
+  <p style="text-align: center;"><br> DESENVOLVIDO PARA A DISCIPLINA DE ENGENHARIA DE SOFTWARE - 2024-1 - UFSJ</p>
+</footer>
+
+</body>
 </html>

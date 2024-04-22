@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/movie-clapper-open.png">
+    <link rel="stylesheet" href="../styles/style_timeline.css">
+    <link rel="stylesheet" href="../styles/style_filmes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>CINEmmunity &bull; Rede social</title>
+</head>
+
+<body class="no-roll" id="body">
+
+<!-- ============== HEADER  =============== -->
+
+<div class="relleno">
+    <header class="header">
+
+        <div class="logo-container">
+                <a class="link" href="timeline.html">
+                    <img src="../images/7arte.png" alt="Logo Letterboxd">
+                    <h1>CINEmmunity</h1>
+                </a>
+        </div>
+            <ul class="lista-navbar">
+                <li><a href="perfil.html"><img src="../images/iconos-usuarios/Elisa Tuler2.jpg">Elisa<i></i></a></li>
+                <li><a href="filmes.html">Filmes</a></li>
+               <li><a href="listas.html">Listas</a></li>
+               <li><a href="#"><i class="bi-search"></i></a></li>
+               <li><button id="botao-sair">SAIR</button></li>
+            </ul>
+        <div class="iconos-resize">
+            <i class="bi bi-plus-lg"></i>
+            <i class="bi bi-list-ul"></i>
+            <i class="bi-search"></i>
+        </div>
+
+    </header>
+</div>
+
+<!-- ============== MAIN ============= -->
+
+<div class="degrade"></div>
+
+<section class="container content">
+   <main>
+        
+      <div class="buscarFilme">
+        <input id="busca-filme" type="text" placeholder="Filme" oninput="buscarFilmes()">
+        <button id="loginSubmit">Buscar</button>
+      </div>
+
+      <div class="sobretodo">
+         <a href="#">Filmes vistos</a>
+       </div>
+       <section class="recent-from-friends popular-poster">
+         <ul class="posters-list">
+           <!-- POSTER 1 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <img src="../images/posters/phantom-thread.jpg" class="poster" />
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <!-- POSTER 2 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <img src="../images/posters/everything-everywhere-all-at-once.jpg" class="poster" />
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <!-- POSTER 3 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <img src="../images/posters/ford-v-ferrari.jpg" class="poster" />
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <!-- POSTER 4 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <img src="../images/posters/lalaland.jpg" class="poster" />
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <!-- POSTER 5 -->
+           <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/american-psycho.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <br>
+          <br>
+          <!-- POSTER 6 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/apocalypse-now.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 7 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/avatar.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 8 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/babylon.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 9 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/boogie-nights.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 10 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/collateral.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <br>
+          <br>
+          <!-- POSTER 11 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/da-vinci.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 12 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/deep-water-movie-poster.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 13 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/dont-worry-darling.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 14 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/everything-everywhere-all-at-once.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 15 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/fabelmans.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+         <br><br>
+         <!-- POSTER 16 -->
+         <li class="poster-container">
+          <div class="poster-content">
+            <img src="../images/posters/ford-v-ferrari.jpg" class="poster" />
+            <div class="action-poster">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-suit-heart-fill"></i>
+              <i class="bi bi-three-dots"></i>
+            </div>
+          </div>
+        </li>
+       <!-- POSTER 17 -->
+       <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/kimi-movie-poster.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 18 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/la-mano-de-dios.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 19 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/licorice-pizza.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 20 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/lightyear.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <br><br>
+      <!-- POSTER 21 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/logan.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 22 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/magnolia.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 23 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/malignant-movie-poster.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 24 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/ouatih.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 25 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/passengers.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <br><br>
+      <!-- POSTER 27 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/ratatouille.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 28 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/rocky-ii.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 29 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/spencer.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 30 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/spider-man-1.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 31 -->
+      <!-- POSTER 32 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/spider-man-into-the-spider-verse.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <br><br>
+      <!-- POSTER 37 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/the-batman.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 38 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/the-french-dispatch.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 39 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/the-master.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 40 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/the-northman-movie-poster.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 41 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/the-thing.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <br><br>
+      <!-- POSTER 42 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/thing.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 43 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/top-gun.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <!-- POSTER 44 -->
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/unbreakable.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/x-movie-poster.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      <li class="poster-container">
+        <div class="poster-content">
+          <img src="../images/posters/zombieland.jpg" class="poster" />
+          <div class="action-poster">
+            <i class="bi bi-eye-fill"></i>
+            <i class="bi bi-suit-heart-fill"></i>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </li>
+      </ul>
+    </section>
+   </main>
+</section>
+    
+
+<footer>
+<p style="text-align: center;"><br> DESENVOLVIDO PARA A DISCIPLINA DE ENGENHARIA DE SOFTWARE - 2024-1 - UFSJ</p>
+</footer>
+
+<script>
+    document.getElementById('botao-sair').addEventListener('click', async () => {
+        window.location.href = "../index.html";
+    });
+
+    function buscarFilmes() {
+        var input = document.getElementById('busca-filme');
+        var valorDigitado = input.value.toLowerCase();
+
+        var filmes = ["Avatar", "Projeto X", "Carros", "Duna", "Oppenheimer", "O Poderoso Chefão", 
+        "Titanic", "O Senhor dos Anéis: O Retorno do Rei", "A Origem", "Pulp Fiction: Tempo de Violência", 
+        "Forrest Gump: O Contador de Histórias", "Interestelar", "A Lista de Schindler", "O Silêncio dos Inocentes", 
+        "Clube da Luta", "Matrix", "O Rei Leão", "Star Wars: Uma Nova Esperança", "Casablanca", "O Labirinto do Fauno", 
+        "Gladiador", "Cidade de Deus", "Psicose", "O Grande Gatsby", "O Curioso Caso de Benjamin Button"];
+
+
+        var lista = document.getElementById('lista-sugestoes');
+        if (lista) {
+            lista.parentNode.removeChild(lista);
+        }
+
+        lista = document.createElement('ul');
+        lista.id = 'lista-sugestoes';
+
+        filmes.forEach(function(filme) {
+            if (filme.toLowerCase().includes(valorDigitado)) {
+                var itemLista = document.createElement('li');
+                itemLista.textContent = filme;
+                lista.appendChild(itemLista);
+            }
+        });
+        
+        input.parentNode.appendChild(lista);
+
+        if (valorDigitado === '') {
+            limparSugestoes();
+            return;
+        }
+    }
+
+    function limparSugestoes() {
+        var lista = document.getElementById('lista-sugestoes');
+        if (lista) {
+            lista.parentNode.removeChild(lista);
+        }
+    }
+</script>
+
+</html>
