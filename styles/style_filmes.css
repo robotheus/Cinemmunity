@@ -15,18 +15,20 @@
   }
   
   input[type=text], input[type=password], input[type=email] {
-      padding: 5px;
+      padding: 6px;
+      margin-top: 15px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      width: 100%;
   }
+  
   
   ::placeholder {
     text-align: center;
   }
 
   .box-busca{ 
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,85 +38,26 @@
     background-color: #ffffff;
 }
 
-
-.search-box-input::placeholder {
+#lista-sugestoes {
+    top: calc(100% + 0px); /* Posiciona a lista abaixo da caixa de pesquisa */
+    left: 0;
+    width: 100%; /* Faz com que a lista tenha a mesma largura que a caixa de pesquisa */
+    background-color: #fff; /* Cor de fundo branca */
+    border: 1px solid #ccc; /* Borda cinza */
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 3px;
+    margin: 0;
+    font-size: 14px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
+    border-radius: 5px;
     
-    color:#ffffff;
-    opacity: 0.6;
-
 }
 
-/* Chrome, Opera ySafari */
-.search-box-input::-webkit-input-placeholder { color: #ffffff; }
-
-/* Firefox 19+ */
-.search-box-input::-moz-placeholder { color: #ffffff; }
-
-/* IE 10+ y Edge */
-.search-box-input:-ms-input-placeholder { color: #ffffff; }
-
-
-.search-box form {
-    
-    display: flex;
-    border-radius: 50px;
-    background-color: #4c4c4c;
-    height: 45px;
-
+#lista-sugestoes li {
+    padding: 8px 10px;
+    cursor: pointer;
 }
 
-.search-box:hover .search-box-input {
-    
-    padding-left: 2em;
-    padding-right: 1em;
-    width: 250px;
-
-}
-
-.search-box-input {
-
-    outline: 0;
-    font-size: 1.2em;
-    color: #fff;
-    width: 0;
-    padding: 0;
-    border: none;
-    background: none;
-    transition: .45s;
-
-}
-
-.search-box-button {
-
-   display: flex;
-   border-radius: 50%;
-   width: 45px;
-   height: 45px;
-   background-color: #14c0c7;
-   border: none;
-   cursor: pointer;
-   transition: .3s;
-
-}
-
-.search-box-button:active  {
-
-    transform: scale(.85);
-
-}
-
-.search-box-icone {
-
-    margin: auto;
-    color: #fff;
-
-}
-
-
-@media screen and (min-width: 400px){
-    
-    .search-box:hover .search-box-input {
-        width: 360px;
-    }
-
+#lista-sugestoes li:hover {
+    background-color: #f0f0f0; /* Cor de fundo quando o item da lista é destacado */
 }

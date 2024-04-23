@@ -48,10 +48,10 @@
 <section class="container content">
    <main>
         
-      <div class="buscarFilme">
-        <input id="busca-filme" type="text" placeholder="Filme" oninput="buscarFilmes()">
-        <button id="loginSubmit">Buscar</button>
-      </div>
+    <div>
+      <input id="busca-filme" type="text" placeholder="Filme" oninput="buscarFilmes()">
+    </div>
+    <ul id="lista-sugestoes" style="display: none;"></ul>
 
       <div class="sobretodo">
          <a href="#">Filmes vistos</a>
@@ -72,7 +72,7 @@
            <!-- POSTER 2 -->
            <li class="poster-container">
              <div class="poster-content">
-               <img src="../images/posters/everything-everywhere-all-at-once.jpg" class="poster" />
+               <a href="review.html"><img src="../images/posters/everything-everywhere-all-at-once.jpg" class="poster" /></a>
                <div class="action-poster">
                  <i class="bi bi-eye-fill"></i>
                  <i class="bi bi-suit-heart-fill"></i>
@@ -522,39 +522,44 @@
     });
 
     function buscarFilmes() {
-        var input = document.getElementById('busca-filme');
-        var valorDigitado = input.value.toLowerCase();
+    var input = document.getElementById('busca-filme');
+    var valorDigitado = input.value.trim().toLowerCase();
 
-        var filmes = ["Avatar", "Projeto X", "Carros", "Duna", "Oppenheimer", "O Poderoso Chefão", 
-        "Titanic", "O Senhor dos Anéis: O Retorno do Rei", "A Origem", "Pulp Fiction: Tempo de Violência", 
-        "Forrest Gump: O Contador de Histórias", "Interestelar", "A Lista de Schindler", "O Silêncio dos Inocentes", 
-        "Clube da Luta", "Matrix", "O Rei Leão", "Star Wars: Uma Nova Esperança", "Casablanca", "O Labirinto do Fauno", 
-        "Gladiador", "Cidade de Deus", "Psicose", "O Grande Gatsby", "O Curioso Caso de Benjamin Button"];
-
-
-        var lista = document.getElementById('lista-sugestoes');
-        if (lista) {
-            lista.parentNode.removeChild(lista);
-        }
-
-        lista = document.createElement('ul');
-        lista.id = 'lista-sugestoes';
-
-        filmes.forEach(function(filme) {
-            if (filme.toLowerCase().includes(valorDigitado)) {
-                var itemLista = document.createElement('li');
-                itemLista.textContent = filme;
-                lista.appendChild(itemLista);
-            }
-        });
-        
-        input.parentNode.appendChild(lista);
-
-        if (valorDigitado === '') {
-            limparSugestoes();
-            return;
-        }
+    // Verifica se o valor digitado possui pelo menos uma letra
+    if (valorDigitado.length > 0) {
+        mostrarLista(); // Exibe a lista de sugestões
+    } else {
+        ocultarLista(); // Oculta a lista de sugestões se nenhum texto foi digitado
     }
+
+    var filmes = ["Avatar", "Projeto X", "Carros", "Duna", "Oppenheimer", "O Poderoso Chefão", 
+    "Titanic", "O Senhor dos Anéis: O Retorno do Rei", "A Origem", "Pulp Fiction: Tempo de Violência", 
+    "Forrest Gump: O Contador de Histórias", "Interestelar", "A Lista de Schindler", "O Silêncio dos Inocentes", 
+    "Clube da Luta", "Matrix", "O Rei Leão", "Star Wars: Uma Nova Esperança", "Casablanca", "O Labirinto do Fauno", 
+    "Gladiador", "Cidade de Deus", "Psicose", "O Grande Gatsby", "O Curioso Caso de Benjamin Button"];
+
+    var lista = document.getElementById('lista-sugestoes');
+    lista.innerHTML = ''; // Limpa a lista de sugestões antes de adicionar novos itens
+
+    filmes.forEach(function(filme) {
+        if (filme.toLowerCase().includes(valorDigitado)) {
+            var itemLista = document.createElement('li');
+            itemLista.textContent = filme;
+            lista.appendChild(itemLista);
+        }
+    });
+}
+
+    function mostrarLista() {
+        var lista = document.getElementById('lista-sugestoes');
+        lista.style.display = 'block';
+    }
+
+    function ocultarLista() {
+        var lista = document.getElementById('lista-sugestoes');
+        lista.style.display = 'none';
+    }
+
 
     function limparSugestoes() {
         var lista = document.getElementById('lista-sugestoes');
