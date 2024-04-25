@@ -95,7 +95,7 @@
            <!-- POSTER 4 -->
            <li class="poster-container">
              <div class="poster-content">
-               <img src="../images/posters/lalaland.jpg" class="poster" />
+               <a href="review4.html"><img src="../images/posters/lalaland.jpg" class="poster" /></a>
                <div class="action-poster">
                  <i class="bi bi-eye-fill"></i>
                  <i class="bi bi-suit-heart-fill"></i>
@@ -106,7 +106,7 @@
            <!-- POSTER 5 -->
            <li class="poster-container">
             <div class="poster-content">
-              <img src="../images/posters/american-psycho.jpg" class="poster" />
+              <a href="review5.html"><img src="../images/posters/american-psycho.jpg" class="poster" /></a>
               <div class="action-poster">
                 <i class="bi bi-eye-fill"></i>
                 <i class="bi bi-suit-heart-fill"></i>
@@ -170,37 +170,42 @@
 </footer>
 
 <script>
-    document.getElementById('botao-sair').addEventListener('click', async () => {
-        window.location.href = "../index.html";
-    });
+  document.getElementById('botao-sair').addEventListener('click', async () => {
+      window.location.href = "../index.html";
+  });
 
-    function buscarFilmes() {
-    var input = document.getElementById('busca-filme');
-    var valorDigitado = input.value.trim().toLowerCase();
+  function buscarFilmes() {
+      var input = document.getElementById('busca-filme');
+      var valorDigitado = input.value.trim().toLowerCase();
 
-    if (valorDigitado.length > 0) {
-        mostrarLista(); 
-    } else {
-        ocultarLista(); 
+      if (valorDigitado.length > 0) {
+          mostrarLista(); 
+      } else {
+          ocultarLista(); 
+      }
+
+      var filmes = ["Avatar", "Projeto X", "Carros", "Duna", "Oppenheimer", "O Poderoso Chefão", 
+      "Titanic", "O Senhor dos Anéis: O Retorno do Rei", "A Origem", "Pulp Fiction: Tempo de Violência", 
+      "Forrest Gump: O Contador de Histórias", "Interestelar", "A Lista de Schindler", "O Silêncio dos Inocentes", 
+      "Clube da Luta", "Matrix", "O Rei Leão", "Star Wars: Uma Nova Esperança", "Casablanca", "O Labirinto do Fauno", 
+      "Gladiador", "Cidade de Deus", "Psicose", "O Grande Gatsby", "O Curioso Caso de Benjamin Button"];
+
+      var lista = document.getElementById('lista-sugestoes');
+      lista.innerHTML = '';
+
+      filmes.forEach(function(filme) {
+          if (filme.toLowerCase().includes(valorDigitado)) {
+              var itemLista = document.createElement('li');
+              itemLista.textContent = filme;
+              itemLista.setAttribute('onclick', 'redireciona()'); 
+              lista.appendChild(itemLista);
+          }
+      });
+  }
+
+    function redireciona() {
+        window.location.href = "rei.html";
     }
-
-    var filmes = ["Avatar", "Projeto X", "Carros", "Duna", "Oppenheimer", "O Poderoso Chefão", 
-    "Titanic", "O Senhor dos Anéis: O Retorno do Rei", "A Origem", "Pulp Fiction: Tempo de Violência", 
-    "Forrest Gump: O Contador de Histórias", "Interestelar", "A Lista de Schindler", "O Silêncio dos Inocentes", 
-    "Clube da Luta", "Matrix", "O Rei Leão", "Star Wars: Uma Nova Esperança", "Casablanca", "O Labirinto do Fauno", 
-    "Gladiador", "Cidade de Deus", "Psicose", "O Grande Gatsby", "O Curioso Caso de Benjamin Button"];
-
-    var lista = document.getElementById('lista-sugestoes');
-    lista.innerHTML = '';
-
-    filmes.forEach(function(filme) {
-        if (filme.toLowerCase().includes(valorDigitado)) {
-            var itemLista = document.createElement('li');
-            itemLista.textContent = filme;
-            lista.appendChild(itemLista);
-        }
-    });
-}
 
     function mostrarLista() {
         var lista = document.getElementById('lista-sugestoes');
@@ -211,7 +216,6 @@
         var lista = document.getElementById('lista-sugestoes');
         lista.style.display = 'none';
     }
-
 
     function limparSugestoes() {
         var lista = document.getElementById('lista-sugestoes');
