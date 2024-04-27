@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/movie-clapper-open.png">
+    <link rel="stylesheet" href="../styles/style_timeline.css">
+    <link rel="stylesheet" href="../styles/style_filmes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>CINEmmunity &bull; Rede social</title>
+</head>
+
+<body class="no-roll" id="body">
+
+<!-- ============== HEADER  =============== -->
+
+<div class="relleno">
+    <header class="header">
+
+        <div class="logo-container">
+                <a class="link" href="timeline.html">
+                    <img src="../images/7arte.png" alt="Logo Letterboxd">
+                    <h1>CINEmmunity</h1>
+                </a>
+        </div>
+            <ul class="lista-navbar">
+                <li><a href="perfil.html"><img src="../images/iconos-usuarios/Elisa Tuler2.jpg">Elisa<i></i></a></li>
+                <li><a href="filmes.html">Filmes</a></li>
+               <li><a href="listas.html">Listas</a></li>
+               <li><a href="#"><i class="bi-search"></i></a></li>
+               <li><button id="botao-sair">SAIR</button></li>
+            </ul>
+        <div class="iconos-resize">
+            <i class="bi bi-plus-lg"></i>
+            <i class="bi bi-list-ul"></i>
+            <i class="bi-search"></i>
+        </div>
+
+    </header>
+</div>
+
+<!-- ============== MAIN ============= -->
+
+<div class="degrade"></div>
+
+<section class="container content">
+   <main>
+        
+    <div>
+      <input id="busca-filme" type="text" placeholder="Filme" oninput="buscarFilmes()">
+    </div>
+    <ul id="lista-sugestoes" style="display: none;"></ul>
+
+      <div class="sobretodo">
+         <a href="#">Filmes vistos</a>
+       </div>
+       <section class="recent-from-friends popular-poster">
+         <ul class="posters-list">
+            <li class="poster-container">
+                <div class="poster-content">
+                  <a href="review6.html"><img src="https://a.ltrbxd.com/resized/sm/upload/lz/96/yu/mf/ztuEReeV6ofpU1HxUV9AsR6aLoe-0-1000-0-1500-crop.jpg?v=47499379fa" class="poster" /></a>
+                  <div class="action-poster">
+                    <i class="bi bi-eye-fill"></i>
+                    <i class="bi bi-suit-heart-fill"></i>
+                    <i class="bi bi-three-dots"></i>
+                  </div>
+                </div>
+              </li>
+            <!-- POSTER 1 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <a href="review1.html"><img src="../images/posters/phantom-thread.jpg" class="poster" /></a>
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <!-- POSTER 2 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <a href="review2.html"><img src="../images/posters/da-vinci.jpg" class="poster" /></a>
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+            <!-- POSTER 3 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <a href="review3.html"><img src="../images/posters/ford-v-ferrari.jpg" class="poster" /></a>
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <!-- POSTER 4 -->
+           <li class="poster-container">
+             <div class="poster-content">
+               <a href="review4.html"><img src="../images/posters/lalaland.jpg" class="poster" /></a>
+               <div class="action-poster">
+                 <i class="bi bi-eye-fill"></i>
+                 <i class="bi bi-suit-heart-fill"></i>
+                 <i class="bi bi-three-dots"></i>
+               </div>
+             </div>
+           </li>
+           <br>
+          <br>
+           <!-- POSTER 5 -->
+           <li class="poster-container">
+            <div class="poster-content">
+              <a href="review5.html"><img src="../images/posters/american-psycho.jpg" class="poster" /></a>
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 6 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/apocalypse-now.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 7 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/avatar.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 8 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/babylon.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+          <!-- POSTER 9 -->
+          <li class="poster-container">
+            <div class="poster-content">
+              <img src="../images/posters/boogie-nights.jpg" class="poster" />
+              <div class="action-poster">
+                <i class="bi bi-eye-fill"></i>
+                <i class="bi bi-suit-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </li>
+    </section>
+   </main>
+</section>
+    
+
+<footer>
+<p style="text-align: center;"><br> DESENVOLVIDO PARA A DISCIPLINA DE ENGENHARIA DE SOFTWARE - 2024-1 - UFSJ</p>
+</footer>
+
+<script>
+  document.getElementById('botao-sair').addEventListener('click', async () => {
+      window.location.href = "../index.html";
+  });
+
+  function buscarFilmes() {
+      var input = document.getElementById('busca-filme');
+      var valorDigitado = input.value.trim().toLowerCase();
+
+      if (valorDigitado.length > 0) {
+          mostrarLista(); 
+      } else {
+          ocultarLista(); 
+      }
+
+      var filmes = ["Avatar", "Projeto X", "Carros", "Duna", "Oppenheimer", "O Poderoso Chefão", 
+      "Titanic", "O Senhor dos Anéis: O Retorno do Rei", "A Origem", "Pulp Fiction: Tempo de Violência", 
+      "Forrest Gump: O Contador de Histórias", "Interestelar", "A Lista de Schindler", "O Silêncio dos Inocentes", 
+      "Clube da Luta", "Matrix", "O Rei Leão", "Star Wars: Uma Nova Esperança", "Casablanca", "O Labirinto do Fauno", 
+      "Gladiador", "Cidade de Deus", "Psicose", "O Grande Gatsby", "O Curioso Caso de Benjamin Button"];
+
+      var lista = document.getElementById('lista-sugestoes');
+      lista.innerHTML = '';
+
+      filmes.forEach(function(filme) {
+          if (filme.toLowerCase().includes(valorDigitado)) {
+              var itemLista = document.createElement('li');
+              itemLista.textContent = filme;
+              itemLista.setAttribute('onclick', 'redireciona()'); 
+              lista.appendChild(itemLista);
+          }
+      });
+  }
+
+    function redireciona() {
+        window.location.href = "rei.html";
+    }
+
+    function mostrarLista() {
+        var lista = document.getElementById('lista-sugestoes');
+        lista.style.display = 'block';
+    }
+
+    function ocultarLista() {
+        var lista = document.getElementById('lista-sugestoes');
+        lista.style.display = 'none';
+    }
+
+    function limparSugestoes() {
+        var lista = document.getElementById('lista-sugestoes');
+        if (lista) {
+            lista.parentNode.removeChild(lista);
+        }
+    }
+</script>
+
+</html>

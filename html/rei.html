@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../styles/style_timeline.css">
     <link rel="stylesheet" href="../styles/style_filmes.css">
     <link rel="stylesheet" href="../styles/style_rei.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style_review.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>CINEmmunity &bull; Rede social</title>
 </head>
 
@@ -31,7 +32,7 @@
                 <li><a href="filmes.html">Filmes</a></li>
                <li><a href="listas.html">Listas</a></li>
                <li><a href="#"><i class="bi-search"></i></a></li>
-               <li><button id="botao-sair">SAIR</button></li>
+               <li><a href="../index.html"><button id="botao-sair">SAIR</button></li></a>
             </ul>
         <div class="iconos-resize">
             <i class="bi bi-plus-lg"></i>
@@ -46,20 +47,58 @@
 
 <div class="degrade"></div>
 
-<section class="container content">
-   <main>
+    <main id="paginaReview">
+
+        <section class="review">
     
+            <img style="margin-top: 50px;" src="https://a.ltrbxd.com/resized/sm/upload/lz/96/yu/mf/ztuEReeV6ofpU1HxUV9AsR6aLoe-0-1000-0-1500-crop.jpg?v=47499379fa" class="poster">
     
-   </main>
-</section>
+            <section class="core">
+                <div>
+                    <p id="username">Review por <span class="user">Elisa</span>
+                    <img src="../images/iconos-usuarios/Elisa Tuler2.jpg" class="foto-perfil"></p> 
+                </div>
+                <hr>
+            
+                <h1 class="titulo">Rei Leão<span id="ano">1994</span> 
+                    <span style="margin-left: 275px; font-size: 18px;">
+                        <input id="toggle-heart" type="checkbox"/>
+                        <label for="toggle-heart">❤</label>
+                    </span>
+                </h1>
+                
+                
+                <div class="container">
+                    <h2>Escreva seu review
+                        <span class="rating">
+                            <input type="radio" name="star" id="star1"><label for="star1"></label>
+                            <input type="radio" name="star" id="star2"><label for="star2"></label>
+                            <input type="radio" name="star" id="star3"><label for="star3"></label>
+                            <input type="radio" name="star" id="star4"><label for="star4"></label>
+                            <input type="radio" name="star" id="star5"><label for="star5"></label>
+                        </span>
+                        
+                    </h2>
+
+                    <textarea id="review-input" placeholder="Review"></textarea>
+                    <a href="filmes2.html"><button id="save-btn">Salvar</button></a>
+                    
+                    
+                </div>
+            </section>
+            
+        </section>
+        
+       </main>
     
 
 <footer>
-<p style="text-align: center;"><br> DESENVOLVIDO PARA A DISCIPLINA DE ENGENHARIA DE SOFTWARE - 2024-1 - UFSJ</p>
+<p><br> DESENVOLVIDO PARA A DISCIPLINA DE ENGENHARIA DE SOFTWARE - 2024-1 - UFSJ</p>
+
 </footer>
 
 <script>
-    
+
 </script>
 
 </html>
