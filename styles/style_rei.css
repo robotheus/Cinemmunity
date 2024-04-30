@@ -69,6 +69,7 @@
 .rating label{
     cursor: pointer;
     width: 25px;
+    position: relative;
 }
 
 .rating label:before {
@@ -86,6 +87,7 @@
     font-size: 25px;
     color: #00bd09;
     top: 0;
+    left: 0;
     opacity: 0;
     transition: .5;
     text-shadow: 0 4px 5px rgba(0, 0, 0, .5);
